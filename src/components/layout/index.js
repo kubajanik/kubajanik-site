@@ -19,7 +19,7 @@ export default function Layout({children}) {
           <DarkMode />
         </div>
       </header>
-      <main>
+      <main className="w-full flex-1">
         {children}
       </main>
     </div>  
