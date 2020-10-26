@@ -13,9 +13,9 @@ export default function Layout({children}) {
         <TopBar onToggle={() => setIsOpen(!isOpen)} isOpen={isOpen} />
         <div className={`flex md:flex flex-col items-center text-white mt-6 ${!isOpen && 'hidden'}`}>
           <Profile />
-          <hr className="w-full my-4 border-solid border-green-600" />
+          <hr className="w-full my-4 border-0 border-t border-solid border-green-600" />
           <Navigation />
-          <hr className="w-full mt-4 mb-6 border-solid border-green-600" />
+          <hr className="w-full mt-4 mb-6 border-0 border-t border-solid border-green-600" />
           <DarkMode />
         </div>
       </header>

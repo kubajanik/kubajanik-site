@@ -5,6 +5,12 @@ module.exports = {/* Your site config here */
       options: {
         postCssPlugins: [require('tailwindcss')('./tailwind.config.js')]
       }
+    },
+    {
+      resolve: `gatsby-plugin-typography`,
+      options: {
+        pathToConfigModule: `src/utils/typography`,
+      }
     }
   ],
 }
