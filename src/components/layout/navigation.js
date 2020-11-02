@@ -10,7 +10,7 @@ import {
 
 export default function Navigation() {
   return (
-    <nav className="flex flex-col self-start md:self-center">
+    <nav className="flex flex-col self-start lg:self-center">
       <Link 
         className="text-green-100 flex items-center p-2 font-bold hover:text-green-700 transition-colors duration-500" 
         to="/"
