@@ -1,0 +1,42 @@
+-
+  title: Chat CSS Illustration
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
+  image: https://res.cloudinary.com/djc9jias4/image/upload/v1602411348/chat-app-css-illustration/mrlojgx9zagw8og6fr5w.png
+  github: https://github.com/jakubjanik1/chat-app-css-illustration
+  live: https://chat-app-css-illustration-indol.vercel.app/
+- 
+  title: Job listings with filtering
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
+  image: https://res.cloudinary.com/djc9jias4/image/upload/v1596522681/job-listings-with-filtering/zgf4nvxf2sidpwbzjitn.png
+  github: https://github.com/jakubjanik1/job-listings-with-filtering
+  live: https://job-listings-with-filtering-psi.vercel.app/
+- 
+  title: IP Address Tracker
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
+  image: https://res.cloudinary.com/djc9jias4/image/upload/v1602754357/ip-address-tracker/lsqicd0x2dozeg2mroqc.png
+  github: https://github.com/jakubjanik1/ip-address-tracker
+  live: http://ip-address-tracker-umber.vercel.app/
+- 
+  title: Intro component with sign-up form
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
+  image: https://res.cloudinary.com/djc9jias4/image/upload/v1596278307/intro-component-with-signup-form/sijx2itfdzkzvblhfbak.png
+  github: https://github.com/jakubjanik1/intro-component-with-signup-form
+  live: https://intro-component-with-signup-form-rust.now.sh/
+- 
+  title: CodeSociety
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
+  image: https://res.cloudinary.com/djc9jias4/image/upload/v1598516976/code-society/tpawgfn9jqwrorng625y.png
+  github: https://github.com/jakubjanik1/CodeSociety
+  live: https://codesociety.herokuapp.com/
+- 
+  title: readingly
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
+  image: https://res.cloudinary.com/djc9jias4/image/upload/v1596178207/readingly/ds2anbuxnwqrneezqmz8.jpg
+  github: https://github.com/jakubjanik1/readingly
+  live: https://readingly-ab5f7.firebaseapp.com/
+- 
+  title: ChatMastery
+  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
+  image: https://res.cloudinary.com/djc9jias4/image/upload/v1604322181/chatmastery_github/g0rvcmcdsijiwljq19dk.png
+  github: https://github.com/jakubjanik1/ChatMastery
+  live: https://chatmastery.herokuapp.com/
