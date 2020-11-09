@@ -24,33 +24,35 @@ export default function Portfolio() {
         </div>
       </section>
       <section className="py-12">
-        <div className="mx-auto max-w-3xl px-8 grid grid-cols-3 content-between gap-5">
+        <div className="mx-auto max-w-5xl px-8 flex flex-wrap flex-col md:flex-row">
           {projects.map(project => (
-            <div className="bg-gray-100 relative rounded">
-              <img className="mb-0 rounded-t" src={project.image} alt=""/>
-              <div className="p-5">
-                <h5 className="mb-3 font-bold text-base">{project.title}</h5>
-                <p className="text-sm">{project.description}</p>
-              </div>
-              <div className="rounded absolute inset-0 bg-gray-400 h-full w-full opacity-0 hover:bg-opacity-75 hover:opacity-100 cursor-pointer flex flex-col items-center justify-evenly transition-all duration-500 ease-in-out">
-                <a
-                  className="flex items-center justify-center h-8 text-sm mb-4 mr-3 px-4 py-1 bg-green-500 text-green-100 font-bold rounded hover:bg-green-700 transition-colors duration-500"
-                  href={project.github}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaGithubAlt className="mr-2" /> 
-                  Github
-                </a>
-                <a
-                  className="flex items-center justify-center h-8 text-sm mb-4 mr-3 px-4 py-1 bg-gray-600 text-green-100 font-bold rounded hover:bg-gray-700 transition-colors duration-500"
-                  href={project.live}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <FaEye className="mr-2" /> 
-                  Live
-                </a>
+            <div className="md:w-1/2 mb-4 px-4">
+              <div className="bg-gray-100 relative rounded">
+                <img className="mb-0 rounded-t" src={project.image} alt=""/>
+                <div className="p-5">
+                  <h5 className="mb-3 font-bold text-base">{project.title}</h5>
+                  <p className="text-sm">{project.description}</p>
+                </div>
+                <div className="rounded absolute inset-0 bg-gray-400 h-full w-full opacity-0 hover:bg-opacity-75 hover:opacity-100 cursor-pointer flex flex-col items-center justify-evenly transition-all duration-500 ease-in-out">
+                  <a
+                    className="flex items-center justify-center h-8 text-sm mb-4 mr-3 px-4 py-1 bg-green-500 text-green-100 font-bold rounded hover:bg-green-700 transition-colors duration-500"
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaGithubAlt className="mr-2" /> 
+                    Github
+                  </a>
+                  <a
+                    className="flex items-center justify-center h-8 text-sm mb-4 mr-3 px-4 py-1 bg-gray-600 text-green-100 font-bold rounded hover:bg-gray-700 transition-colors duration-500"
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaEye className="mr-2" /> 
+                    Live
+                  </a>
+                </div>
               </div>
             </div>
           ))}
