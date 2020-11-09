@@ -1,8 +1,10 @@
 import React from 'react'
 import Layout from '../components/layout'
-import {Link} from 'gatsby'
+import {Link, graphql} from 'gatsby'
 
-export default function Blog() {
+export default function Blog({data}) {
+  const {nodes: posts} = data.allMarkdownRemark
+
   return (
     <Layout>
       <section className="py-12 bg-gray-100">
@@ -27,17 +29,17 @@ export default function Blog() {
       </section>
       <section className="py-12">
         <div className="mx-auto max-w-5xl px-8 flex flex-col flex-wrap md:flex-row">
-          {Array.from({length: 5}).map(() => (
-            <div className="mb-4 px-4 md:w-1/3">
+          {posts.map(post => (
+            <div className="mb-4 px-4 md:w-1/3" key={post.id}>
               <div className="bg-gray-100 rounded">
                 <img className="mb-0 rounded-t" src="https://themes.3rdwavemedia.com/devcard/bs4/2.2/assets/images/blog/blog-post-thumb-card-5.jpg" alt=""/>
                 <div className="p-5">
                   <Link to="/blog-post">
-                    <h5 className="mb-3 font-bold text-lg hover:text-green-500 transition-colors duration-500 cursor-pointer">Learn React in 24 Hours</h5>
+                    <h5 className="mb-3 font-bold text-lg hover:text-green-500 transition-colors duration-500 cursor-pointer">{post.frontmatter.title}</h5>
                   </Link>
-                  <p className="mb-4 text-sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient...</p>
+                  <p className="mb-4 text-sm">{post.excerpt}</p>
                 </div>
-                <div className="pb-3 px-5 text-gray-600 text-xs">1 miesiąc temu</div>
+                <div className="pb-3 px-5 text-gray-600 text-xs">{post.frontmatter.date}</div>
               </div>
             </div>
           ))}
@@ -46,3 +48,18 @@ export default function Blog() {
     </Layout>
   )
 }
+
+export const postsQuery = graphql`
+  query {
+    allMarkdownRemark {
+      nodes {
+        id
+        excerpt
+        frontmatter {
+          title
+          date(fromNow: true)
+        }
+      }
+    }
+  }
+`
