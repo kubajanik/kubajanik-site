@@ -32,7 +32,7 @@ export default function Blog({data}) {
           {posts.map(post => (
             <div className="mb-4 px-4 md:w-1/3" key={post.id}>
               <div className="bg-gray-100 rounded">
-                <img className="mb-0 rounded-t" src="https://themes.3rdwavemedia.com/devcard/bs4/2.2/assets/images/blog/blog-post-thumb-card-5.jpg" alt=""/>
+                <img className="mb-0 rounded-t" src={require(`../../content/posts${post.fields.slug}cover.png`)} alt="cover"/>
                 <div className="p-5">
                   <Link to={post.fields.slug}>
                     <h5 className="mb-3 font-bold text-lg hover:text-green-500 transition-colors duration-500 cursor-pointer">{post.frontmatter.title}</h5>
