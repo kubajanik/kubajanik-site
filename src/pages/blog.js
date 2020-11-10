@@ -34,7 +34,7 @@ export default function Blog({data}) {
               <div className="bg-gray-100 rounded">
                 <img className="mb-0 rounded-t" src="https://themes.3rdwavemedia.com/devcard/bs4/2.2/assets/images/blog/blog-post-thumb-card-5.jpg" alt=""/>
                 <div className="p-5">
-                  <Link to="/blog-post">
+                  <Link to={post.fields.slug}>
                     <h5 className="mb-3 font-bold text-lg hover:text-green-500 transition-colors duration-500 cursor-pointer">{post.frontmatter.title}</h5>
                   </Link>
                   <p className="mb-4 text-sm">{post.excerpt}</p>
@@ -51,10 +51,15 @@ export default function Blog({data}) {
 
 export const postsQuery = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      sort: {fields: [frontmatter___date], order: ASC}
+    ) {
       nodes {
         id
         excerpt
+        fields {
+          slug
+        }
         frontmatter {
           title
           date(fromNow: true)
