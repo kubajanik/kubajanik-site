@@ -16,7 +16,8 @@ module.exports = {/* Your site config here */
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
-          `gatsby-remark-reading-time`
+          `gatsby-remark-reading-time`,
+          `gatsby-remark-prismjs`
         ]
       }
     },

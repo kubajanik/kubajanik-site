@@ -19,6 +19,17 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum incidunt quis, ra
 **asddasdsa**
 *asasd*
 
-```js
+```javascript
 console.log(123);
+```
+
+```javascript
+const posts = []
+const ids = posts.map(post => post.id)
+```
+
+```html
+<div>
+  <h1>asdasd</h1>
+</div>
 ```

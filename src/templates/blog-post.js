@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import {graphql} from 'gatsby'
+import 'prismjs/themes/prism-tomorrow.css'
 
 export default function BlogPost({data}) {
   const post = data.markdownRemark
