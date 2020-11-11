@@ -7,10 +7,10 @@ export default function Blog({data}) {
 
   return (
     <Layout>
-      <section className="py-12 bg-gray-100">
+      <section className="py-12 bg-gray-100 dark:bg-gray-900 border-b border-solid dark:border-gray-600 dark:border-opacity-25">
         <div className="mx-auto flex flex-col items-center max-w-3xl px-4">
-          <h1 className="font-bold text-3xl mb-2">Blog</h1>
-          <p className="mb-4 text-center">
+          <h1 className="font-bold text-3xl mb-2 dark:text-green-100">Blog</h1>
+          <p className="mb-4 text-center dark:text-gray-400">
             Witaj na moim blogu. Subskrybuj i otrzymuj najnowsze artykuły na Twoją skrzynkę.
           </p>
           <form className="flex flex-col md:flex-row w-full px-8 sm:px-32 mb-0">
@@ -31,13 +31,13 @@ export default function Blog({data}) {
         <div className="mx-auto max-w-5xl px-8 flex flex-col flex-wrap md:flex-row">
           {posts.map(post => (
             <div className="mb-4 px-4 md:w-1/3" key={post.id}>
-              <div className="bg-gray-100 rounded">
+              <div className="bg-gray-100 rounded dark:bg-gray-800">
                 <img className="mb-0 rounded-t" src={require(`../../content/posts${post.fields.slug}cover.png`)} alt="cover"/>
                 <div className="p-5">
                   <Link to={post.fields.slug}>
-                    <h5 className="mb-3 font-bold text-lg hover:text-green-500 transition-colors duration-500 cursor-pointer">{post.frontmatter.title}</h5>
+                    <h5 className="mb-3 font-bold text-lg dark:text-green-100 hover:text-green-500 dark:hover:text-green-500 transition-colors duration-500 cursor-pointer">{post.frontmatter.title}</h5>
                   </Link>
-                  <p className="mb-4 text-sm">{post.excerpt}</p>
+                  <p className="mb-4 text-sm dark:text-gray-400">{post.excerpt}</p>
                 </div>
                 <div className="pb-3 px-5 text-gray-600 text-xs">{post.frontmatter.date}</div>
               </div>

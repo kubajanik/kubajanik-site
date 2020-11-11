@@ -11,7 +11,7 @@ export default function BlogPost({data}) {
     <Layout>
       <article className="p-12">
         <div className="mx-auto max-w-xl">
-          <h2 className="text-3xl font-bold mb-2">{title}</h2>
+          <h2 className="text-3xl font-bold mb-2 dark:text-green-100">{title}</h2>
           <div className="mb-4 text-sm text-gray-600">
             <span>{date}</span>
             <span className="mx-2">•</span>
@@ -19,7 +19,7 @@ export default function BlogPost({data}) {
             <span className="mx-2">•</span>
             <span>4 comments</span>
           </div>
-          <div dangerouslySetInnerHTML={{__html: post.html}}></div>
+          <div className="dark:text-gray-400" dangerouslySetInnerHTML={{__html: post.html}}></div>
         </div>
       </article>
     </Layout>

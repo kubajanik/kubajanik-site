@@ -9,10 +9,10 @@ export default function Contact() {
 
   return (
     <Layout>
-      <section className="py-12 bg-gray-100">
+      <section className="py-12 bg-gray-100 dark:bg-gray-900 border-b border-solid dark:border-gray-600 dark:border-opacity-25">
         <div className="mx-auto flex flex-col items-center max-w-3xl px-4">
-          <h2 className="font-bold text-3xl mb-2">Kontakt</h2>
-          <p className="mb-4 text-center">
+          <h2 className="font-bold text-3xl mb-2 dark:text-green-100">Kontakt</h2>
+          <p className="mb-4 text-center dark:text-gray-400">
             Masz jakąś propozycję lub po prostu chcesz coś napisać? Możesz
             wypełnić poniższy formularz kontaktowy lub wysłać maila na adres
             <a
@@ -22,7 +22,7 @@ export default function Contact() {
               &nbsp;jakubjanik00@gmail.com
             </a>
           </p>
-          <p className="mb-4 text-center">
+          <p className="mb-4 text-center dark:text-gray-400">
             Chcesz się skontaktować? Objserwuj mnie na poniższych mediach
             społecznościowych.
           </p>
@@ -50,7 +50,7 @@ export default function Contact() {
       </section>
       <section className="py-12">
         <form className="mx-auto max-w-3xl px-8 grid grid-cols-2 gap-4" onSubmit={handleSubmit(onSubmit)}>
-          <h3 className="text-center font-bold text-3xl col-span-2">
+          <h3 className="text-center font-bold text-3xl col-span-2 text-green-100">
             Skontaktuj się
           </h3>
 

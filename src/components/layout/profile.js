@@ -15,22 +15,22 @@ export default function Profile() {
       </p>
       <div className="flex flex-row py-2">
         <a
-          className="bg-green-100 w-8 h-8 rounded-full grid place-items-center mr-2 transition-colors duration-500 hover:bg-opacity-75"
+          className="bg-green-100 text-green-500 dark:bg-green-500 dark:text-green-100 w-8 h-8 rounded-full grid place-items-center mr-2 transition-colors duration-500 hover:bg-opacity-75"
           href="https://github.com/jakubjanik1"
         >
-          <FaGithubAlt color="#48bb78" />
+          <FaGithubAlt />
         </a>
         <a
-          className="bg-green-100 w-8 h-8 rounded-full grid place-items-center mr-2 transition-colors duration-500 hover:bg-opacity-75"
+          className="bg-green-100 text-green-500 dark:bg-green-500 dark:text-green-100 w-8 h-8 rounded-full grid place-items-center mr-2 transition-colors duration-500 hover:bg-opacity-75"
           href="https://linkedin.com/in/kuba-janik"
         >
-          <FaLinkedinIn color="#48bb78" />
+          <FaLinkedinIn />
         </a>
         <a
-          className="bg-green-100 w-8 h-8 rounded-full grid place-items-center transition-colors duration-500 hover:bg-opacity-75"
+          className="bg-green-100 text-green-500 dark:bg-green-500 dark:text-green-100 w-8 h-8 rounded-full grid place-items-center transition-colors duration-500 hover:bg-opacity-75"
           href="https://stackoverflow.com/u/10536648"
         >
-          <FaStackOverflow color="#48bb78" />
+          <FaStackOverflow />
         </a>
       </div>
     </>
