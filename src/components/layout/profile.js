@@ -1,5 +1,6 @@
 import React from 'react'
 import {FaGithubAlt, FaLinkedinIn, FaStackOverflow} from 'react-icons/fa'
+import {Link} from 'gatsby'
 
 export default function Profile() {
   return (
@@ -17,18 +18,24 @@ export default function Profile() {
         <a
           className="bg-green-100 text-green-500 dark:bg-green-500 dark:text-green-100 w-8 h-8 rounded-full grid place-items-center mr-2 transition-colors duration-500 hover:bg-opacity-75"
           href="https://github.com/jakubjanik1"
+          target="_blank"
+          rel="noreferrer"
         >
           <FaGithubAlt />
         </a>
         <a
           className="bg-green-100 text-green-500 dark:bg-green-500 dark:text-green-100 w-8 h-8 rounded-full grid place-items-center mr-2 transition-colors duration-500 hover:bg-opacity-75"
           href="https://linkedin.com/in/kuba-janik"
+          target="_blank"
+          rel="noreferrer"
         >
           <FaLinkedinIn />
         </a>
         <a
           className="bg-green-100 text-green-500 dark:bg-green-500 dark:text-green-100 w-8 h-8 rounded-full grid place-items-center transition-colors duration-500 hover:bg-opacity-75"
           href="https://stackoverflow.com/u/10536648"
+          target="_blank"
+          rel="noreferrer"
         >
           <FaStackOverflow />
         </a>

@@ -2,6 +2,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import {FaPaperPlane, FaEye, FaGithubAlt} from 'react-icons/fa'
 import projects from '../../content/projects.yaml'
+import {Link} from 'gatsby'
 
 export default function Portfolio() {
   return (
@@ -14,13 +15,13 @@ export default function Portfolio() {
             zarówno mniejsze jak i większe. Każdy pozycja zawiera link do działającej aplikacji oraz
             link do repozytorium na Githubie, gdzie znajdziesz więcej informacji na temat projektu.
           </p>
-          <a
+          <Link
             className="flex items-center justify-center h-10 px-4 py-1 bg-green-500 text-green-100 font-bold rounded hover:bg-green-700 transition-colors duration-500"
-            href="/portfolio"
+            to="/contact"
           >
             <FaPaperPlane className="mr-2" /> 
             Skontakuj się
-          </a>
+          </Link>
         </div>
       </section>
       <section className="py-12">

@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import {FaArrowAltCircleRight, FaFileAlt} from 'react-icons/fa'
+import {Link} from 'gatsby'
 
 export default function Home() {
   return (
@@ -14,20 +15,20 @@ export default function Home() {
             Spawdź portfolio z projektami oraz CV.
           </p>
           <div className="mb-6 flex">
-            <a
+            <Link
               className="flex items-center justify-center h-10 mb-4 mr-3 px-4 py-1 bg-green-500 text-green-100 font-bold rounded hover:bg-green-700 transition-colors duration-500"
-              href="/portfolio"
+              to="/portfolio"
             >
               <FaArrowAltCircleRight className="mr-2" /> 
               Zobacz portfolio
-            </a>
-            <a
+            </Link>
+            <Link
               className="flex items-center justify-center h-10 mb-4 px-4 py-1 bg-gray-600 text-green-100 font-bold rounded hover:bg-gray-700 transition-colors duration-500"
-              href="/resume"
+              to="/resume"
             >
               <FaFileAlt className="mr-2" /> 
               Zobacz CV
-            </a>
+            </Link>
           </div>
         </div>
       </section>

@@ -30,18 +30,24 @@ export default function Contact() {
             <a
               className="mr-4 mb-4 transition-colors duration-500 text-green-500 hover:text-green-700"
               href="https://github.com/jakubjanik1"
+              target="_blank"
+              rel="noreferrer"
             >
               <FaGithubAlt size="1.25em" />
             </a>
             <a
               className="mr-4 mb-4 transition-colors duration-500 text-green-500 hover:text-green-700"
               href="https://linkedin.com/in/kuba-janik"
+              target="_blank"
+              rel="noreferrer"
             >
               <FaLinkedinIn size="1.25em" />
             </a>
             <a
               className="mb-4 transition-colors duration-500 text-green-500 hover:text-green-700"
               href="https://stackoverflow.com/u/10536648"
+              target="_blank"
+              rel="noreferrer"
             >
               <FaStackOverflow size="1.25em" />
             </a>
