@@ -1,6 +1,5 @@
 import React from 'react'
 import {FaGithubAlt, FaLinkedinIn, FaStackOverflow} from 'react-icons/fa'
-import {Link} from 'gatsby'
 
 export default function Profile() {
   return (
