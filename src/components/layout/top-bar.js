@@ -7,7 +7,7 @@ export default function TopBar({isOpen, onToggle}) {
   return (
     <div className="flex justify-between lg:justify-center w-full items-center">
       <ToggleIcon 
-        className="lg:hidden text-white cursor-pointer"
+        className="lg:hidden text-green-100 cursor-pointer"
         size="2.5em"
         onClick={onToggle} 
       />

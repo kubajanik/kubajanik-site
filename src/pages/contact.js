@@ -5,7 +5,15 @@ import {useForm} from 'react-hook-form'
 
 export default function Contact() {
   const {handleSubmit, register, errors} = useForm()
-  const onSubmit = () => {}
+
+  const onSubmit = async data => {
+    const response = await window.fetch('/.netlify/functions/contact', {
+      method: 'POST',
+      body: JSON.stringify(data)
+    })
+
+    alert((await response.json()).message)
+  }
 
   return (
     <Layout>
@@ -56,7 +64,7 @@ export default function Contact() {
       </section>
       <section className="py-12">
         <form className="mx-auto max-w-3xl px-8 grid grid-cols-2 gap-4" onSubmit={handleSubmit(onSubmit)}>
-          <h3 className="text-center font-bold text-3xl col-span-2 text-green-100">
+          <h3 className="text-center font-bold text-3xl col-span-2 dark:text-green-100">
             Skontaktuj się
           </h3>
 
