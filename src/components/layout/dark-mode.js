@@ -3,7 +3,7 @@ import {FaAdjust} from 'react-icons/fa'
 
 export default function DarkMode() {
   const [isDarkMode, setIsDarkMode] = React.useState(() => 
-    JSON.parse(window.localStorage.getItem('isDarkMode')) ?? false
+    typeof window !== 'undefined' ? JSON.parse(window.localStorage.getItem('isDarkMode') ?? false) : false
   )
 
   React.useEffect(() => {
@@ -25,7 +25,7 @@ export default function DarkMode() {
           hidden
           onChange={() => setIsDarkMode(!isDarkMode)} 
         />
-        <div className={`${isDarkMode && 'translate-x-full'} w-1/2 h-full bg-green-300 dark:bg-green-500 rounded-2xl transform transition-transform ease-in duration-500 border-green-500 dark:border-gray-800 border-2`}></div>
+        <div className={`${isDarkMode ? 'translate-x-full' : ''} w-1/2 h-full bg-green-300 dark:bg-green-500 rounded-2xl transform transition-transform ease-in duration-500 border-green-500 dark:border-gray-800 border-2`}></div>
       </label>
     </div>
   )

@@ -7,6 +7,12 @@ module.exports = {/* Your site config here */
       }
     },
     {
+      resolve: `gatsby-plugin-purgecss`,
+      options: {
+        tailwind: true
+      }
+    },
+    {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: `${__dirname}/src/utils/typography`,
