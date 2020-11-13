@@ -28,10 +28,10 @@ export default function Blog({data}) {
         </div>
       </section>
       <section className="py-12">
-        <div className="mx-auto max-w-5xl px-8 flex flex-col flex-wrap md:flex-row">
+        <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4">
           {posts.map(post => (
-            <div className="mb-4 px-4 md:w-1/3" key={post.id}>
-              <div className="bg-gray-100 rounded dark:bg-gray-800">
+            <div key={post.id}>
+              <div className="bg-gray-100 rounded dark:bg-gray-800 border border-solid dark:border-gray-600 dark:border-opacity-25">
                 <img className="mb-0 rounded-t" src={require(`../../content/posts${post.fields.slug}cover.png`)} alt="cover"/>
                 <div className="p-5">
                   <Link to={post.fields.slug}>

@@ -3,7 +3,9 @@ import Layout from '../components/layout'
 import {FaArrowAltCircleRight, FaFileAlt} from 'react-icons/fa'
 import {Link} from 'gatsby'
 
-export default function Home() {
+export default function Home({data}) {
+  const {nodes: latestPosts} = data.allMarkdownRemark
+
   return (
     <Layout>
       <section className="py-12 bg-gray-100 dark:bg-gray-900 border-b border-solid dark:border-gray-600 dark:border-opacity-25">
@@ -32,6 +34,47 @@ export default function Home() {
           </div>
         </div>
       </section>
+      <section className="py-12">
+        <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
+          <h2 className="font-bold text-3xl border-l-4 border-green-500 pl-4 col-span-3 dark:text-green-100">Ostatnie artykuły</h2>
+          {latestPosts.map(post => (
+            <div key={post.id}>
+              <div className="bg-gray-100 rounded dark:bg-gray-800 border border-solid dark:border-gray-600 dark:border-opacity-25">
+                <img className="mb-0 rounded-t" src={require(`../../content/posts${post.fields.slug}cover.png`)} alt="cover"/>
+                <div className="p-5">
+                  <Link to={post.fields.slug}>
+                    <h5 className="mb-3 font-bold text-lg dark:text-green-100 hover:text-green-500 dark:hover:text-green-500 transition-colors duration-500 cursor-pointer">{post.frontmatter.title}</h5>
+                  </Link>
+                  <p className="mb-4 text-sm dark:text-gray-400">{post.excerpt}</p>
+                </div>
+                <div className="pb-3 px-5 text-gray-600 text-xs">{post.frontmatter.date}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
     </Layout>
   )
 }
+
+
+export const latestPostsQuery = graphql`
+  query {
+    allMarkdownRemark(
+      sort: {fields: [frontmatter___date], order: ASC},
+      limit: 3
+    ) {
+      nodes {
+        id
+        excerpt
+        fields {
+          slug
+        }
+        frontmatter {
+          title
+          date(fromNow: true)
+        }
+      }
+    }
+  }
+`
