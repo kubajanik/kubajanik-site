@@ -1,7 +1,7 @@
 import React from 'react'
 import Layout from '../components/layout'
 import {FaArrowAltCircleRight, FaFileAlt} from 'react-icons/fa'
-import {Link} from 'gatsby'
+import {Link, graphql} from 'gatsby'
 
 export default function Home({data}) {
   const {nodes: latestPosts} = data.allMarkdownRemark
@@ -36,7 +36,7 @@ export default function Home({data}) {
       </section>
       <section className="py-12">
         <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
-          <h2 className="font-bold text-3xl border-l-4 border-green-500 pl-4 col-span-3 dark:text-green-100">Ostatnie artykuły</h2>
+          <h2 className="font-bold text-3xl border-l-4 border-green-500 pl-4 md:col-span-3 dark:text-green-100">Ostatnie artykuły</h2>
           {latestPosts.map(post => (
             <div key={post.id}>
               <div className="bg-gray-100 rounded dark:bg-gray-800 border border-solid dark:border-gray-600 dark:border-opacity-25">
@@ -56,7 +56,6 @@ export default function Home({data}) {
     </Layout>
   )
 }
-
 
 export const latestPostsQuery = graphql`
   query {
