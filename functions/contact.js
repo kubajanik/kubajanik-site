@@ -1,4 +1,5 @@
 const nodemailer = require('nodemailer')
+require('dotenv').config()
 
 exports.handler = async (event) => {
   const {name, email, message} = JSON.parse(event.body)
@@ -27,13 +28,12 @@ exports.handler = async (event) => {
 
     return {
       statusCode: 200,
-      body: JSON.stringify({message: 'Email sent'})
+      body: JSON.stringify({message: 'Message sent'})
     }
   } catch (err) {
-    console.log(err);
     return {
       statusCode: 500,
-      body: JSON.stringify({message: 'Failed to send email'})
+      body: JSON.stringify({message: 'Failed to send a message'})
     }
   }
 }

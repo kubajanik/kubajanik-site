@@ -4,13 +4,16 @@ import {FaGithubAlt, FaLinkedinIn, FaStackOverflow} from 'react-icons/fa'
 import {useForm} from 'react-hook-form'
 
 export default function Contact() {
-  const {handleSubmit, register, errors} = useForm()
+  const {handleSubmit, register, errors, formState, reset} = useForm()
+  const {isSubmitting} = formState
 
   const onSubmit = async data => {
     const response = await window.fetch('/.netlify/functions/contact', {
       method: 'POST',
       body: JSON.stringify(data)
     })
+
+    reset()
 
     alert((await response.json()).message)
   }
@@ -106,10 +109,11 @@ export default function Contact() {
           </div>
 
           <button
-            className="h-10 p-3 leading-none bg-green-500 rounded col-span-2 text-white font-bold hover:bg-green-700 focus:bg-green-700 focus:outline-none transition-colors duration-500"
+            className="h-10 p-3 leading-none bg-green-500 rounded col-span-2 text-white font-bold hover:bg-green-700 focus:bg-green-700 focus:outline-none disabled:opacity-75 disabled:pointer-events-none transition-colors duration-500"
             type="submit"
+            disabled={isSubmitting}
           >
-            Wyślij
+            {isSubmitting ? 'Wysyłanie...' : 'Wyślij'}
           </button>
         </form>
       </section>

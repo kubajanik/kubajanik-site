@@ -11,6 +11,9 @@ module.exports = {
     textOpacity: ['dark'],
     borderOpacity: ['dark'],
     borderStyle: ['dark'],
+    opacity: ['disabled'],
+    cursor: ['disabled'],
+    pointerEvents: ['disabled']
   },
   plugins: [require('@danestves/tailwindcss-darkmode')()],
 }
