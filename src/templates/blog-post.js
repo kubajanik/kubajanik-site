@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import {graphql} from 'gatsby'
 import 'prismjs/themes/prism-tomorrow.css'
 
@@ -9,6 +10,7 @@ export default function BlogPost({data}) {
 
   return (
     <Layout>
+      <SEO title={title} />
       <article className="p-12">
         <div className="mx-auto max-w-xl">
           <h2 className="text-3xl font-bold mb-2 dark:text-green-100">{title}</h2>

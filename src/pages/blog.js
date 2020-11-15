@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import {Link, graphql} from 'gatsby'
 
 export default function Blog({data}) {
@@ -7,6 +8,7 @@ export default function Blog({data}) {
 
   return (
     <Layout>
+      <SEO title="Blog" />
       <section className="py-12 bg-gray-100 dark:bg-gray-900 border-b border-solid dark:border-gray-600 dark:border-opacity-25">
         <div className="mx-auto flex flex-col items-center max-w-3xl px-4">
           <h1 className="font-bold text-3xl mb-2 dark:text-green-100">Blog</h1>

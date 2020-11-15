@@ -10,7 +10,7 @@ export default function Profile() {
         alt="profile"
       />
       <p className="text-sm text-green-100 text-center mb-4">
-        Cześć, nazywam się Jakub Janik, mam 19 lat i jestem pasjonatem
+        Cześć, nazywam się Kuba Janik, mam 19 lat i jestem pasjonatem
         programowania.
       </p>
       <div className="flex flex-row py-2">

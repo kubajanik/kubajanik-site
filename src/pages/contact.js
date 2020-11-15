@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../components/layout'
+import SEO from '../components/seo'
 import {FaGithubAlt, FaLinkedinIn, FaStackOverflow} from 'react-icons/fa'
 import {useForm} from 'react-hook-form'
 
@@ -20,6 +21,7 @@ export default function Contact() {
 
   return (
     <Layout>
+      <SEO title="Kontakt" />
       <section className="py-12 bg-gray-100 dark:bg-gray-900 border-b border-solid dark:border-gray-600 dark:border-opacity-25">
         <div className="mx-auto flex flex-col items-center max-w-3xl px-4">
           <h2 className="font-bold text-3xl mb-2 dark:text-green-100">Kontakt</h2>
