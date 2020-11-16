@@ -27,15 +27,16 @@ export default function Portfolio() {
         </div>
       </section>
       <section className="py-12">
-        <div className="mx-auto max-w-5xl px-8 flex flex-wrap flex-col md:flex-row">
+        <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
           {projects.map((project, i) => (
-            <div className="md:w-1/2 mb-4 px-4" key={i}>
-              <div className="bg-gray-100 dark:bg-gray-800 relative rounded">
+            <div key={i}>
+              <div className="h-full flex flex-col bg-gray-100 dark:bg-gray-800 relative rounded border border-solid dark:border-gray-600 dark:border-opacity-25">
                 <img className="mb-0 rounded-t" src={project.image} alt=""/>
                 <div className="p-5">
                   <h5 className="mb-3 font-bold text-base dark:text-green-100">{project.title}</h5>
-                  <p className="text-sm dark:text-gray-400">{project.description}</p>
+                  <p className="mb-4 text-sm dark:text-gray-400">{project.description}</p>
                 </div>
+                <div className="mt-auto pb-3 px-5 text-gray-600 text-xs">{project.tags.join(', ')}</div>
                 <div className="rounded absolute inset-0 bg-gray-400 h-full w-full opacity-0 hover:bg-opacity-75 hover:opacity-100 cursor-pointer flex flex-col items-center justify-evenly transition-all duration-500 ease-in-out">
                   <a
                     className="flex items-center justify-center h-8 text-sm mb-4 mr-3 px-4 py-1 bg-green-500 text-green-100 font-bold rounded hover:bg-green-700 transition-colors duration-500"

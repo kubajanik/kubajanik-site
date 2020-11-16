@@ -1,11 +1,14 @@
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import {FaArrowAltCircleRight, FaFileAlt} from 'react-icons/fa'
+import {FaArrowAltCircleRight, FaFileAlt, FaGithubAlt, FaEye} from 'react-icons/fa'
 import {Link, graphql} from 'gatsby'
+import projects from '../../content/projects.yaml'
+import shuffle from 'lodash.shuffle'
 
 export default function Home({data}) {
   const {nodes: latestPosts} = data.allMarkdownRemark
+  const featuredProjects = shuffle(projects).slice(0, 4)
 
   return (
     <Layout>
@@ -36,7 +39,43 @@ export default function Home({data}) {
           </div>
         </div>
       </section>
-      <section className="py-12">
+      <section className="py-12 grid gap-24">
+         <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+          <h2 className="font-bold text-3xl border-l-4 border-green-500 pl-4 md:col-span-2 dark:text-green-100">Przykładowe projekty</h2>
+          {featuredProjects.map((project, i) => (
+            <div key={i}>
+              <div className="h-full flex flex-col bg-gray-100 dark:bg-gray-800 relative rounded border border-solid dark:border-gray-600 dark:border-opacity-25">
+                <img className="mb-0 rounded-t" src={project.image} alt=""/>
+                <div className="p-5">
+                  <h5 className="mb-3 font-bold text-base dark:text-green-100">{project.title}</h5>
+                  <p className="mb-4 text-sm dark:text-gray-400">{project.description}</p>
+                </div>
+                <div className="mt-auto pb-3 px-5 text-gray-600 text-xs">{project.tags.join(', ')}</div>
+                <div className="rounded absolute inset-0 bg-gray-400 h-full w-full opacity-0 hover:bg-opacity-75 hover:opacity-100 cursor-pointer flex flex-col items-center justify-evenly transition-all duration-500 ease-in-out">
+                  <a
+                    className="flex items-center justify-center h-8 text-sm mb-4 mr-3 px-4 py-1 bg-green-500 text-green-100 font-bold rounded hover:bg-green-700 transition-colors duration-500"
+                    href={project.github}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaGithubAlt className="mr-2" /> 
+                    Github
+                  </a>
+                  <a
+                    className="flex items-center justify-center h-8 text-sm mb-4 mr-3 px-4 py-1 bg-gray-600 text-green-100 font-bold rounded hover:bg-gray-700 transition-colors duration-500"
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <FaEye className="mr-2" /> 
+                    Live
+                  </a>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+
         <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
           <h2 className="font-bold text-3xl border-l-4 border-green-500 pl-4 md:col-span-3 dark:text-green-100">Ostatnie artykuły</h2>
           {latestPosts.map(post => (

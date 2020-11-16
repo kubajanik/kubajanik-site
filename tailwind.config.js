@@ -6,12 +6,13 @@ module.exports = {
   },
   variants: {
     backgroundColor: ['hover', 'focus', 'dark', 'dark:hover', 'dark:focus'],
+    backgroundOpacity: ['hover'],
     borderColor: ['hover', 'focus', 'dark', 'dark:hover', 'dark:focus'],
     textColor: ['hover', 'focus', 'dark', 'dark:hover', 'dark:focus'],
     textOpacity: ['dark'],
     borderOpacity: ['dark'],
     borderStyle: ['dark'],
-    opacity: ['disabled'],
+    opacity: ['disabled', 'hover'],
     cursor: ['disabled'],
     pointerEvents: ['disabled']
   },
