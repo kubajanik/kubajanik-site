@@ -39,8 +39,8 @@ export default function Home({data}) {
           </div>
         </div>
       </section>
-      <section className="py-12 grid gap-24">
-         <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12">
+      <section className="py-12">
+        <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 mb-12">
           <h2 className="font-bold text-3xl border-l-4 border-green-500 pl-4 md:col-span-2 dark:text-green-100">Przykładowe projekty</h2>
           {featuredProjects.map((project, i) => (
             <div key={i}>
@@ -75,8 +75,23 @@ export default function Home({data}) {
             </div>
           ))}
         </div>
+        <div className="flex justify-center py-4">
+          <Link
+            className="flex items-center justify-center h-10 px-4 py-1 bg-green-500 text-green-100 font-bold rounded hover:bg-green-700 transition-colors duration-500"
+            to="/portfolio"
+          >
+            <FaArrowAltCircleRight className="mr-2" /> 
+            Zobacz portfolio
+          </Link>
+        </div>
+      </section>
 
-        <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
+      <div className="mx-auto max-w-5xl px-8">
+        <div className="my-4 border-0 border-t border-solid border- dark:border-gray-600 dark:border-opacity-25" />
+      </div>
+
+      <section className="py-12">
+        <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12 mb-12">
           <h2 className="font-bold text-3xl border-l-4 border-green-500 pl-4 md:col-span-3 dark:text-green-100">Ostatnie artykuły</h2>
           {latestPosts.map(post => (
             <div key={post.id}>
@@ -93,6 +108,15 @@ export default function Home({data}) {
             </div>
           ))}
         </div>
+        <div className="flex justify-center py-4">
+        <Link
+          className="flex items-center justify-center h-10 px-4 py-1 bg-green-500 text-green-100 font-bold rounded hover:bg-green-700 transition-colors duration-500"
+          to="/blog"
+        >
+          <FaArrowAltCircleRight className="mr-2" /> 
+          Zobacz blog
+        </Link>
+      </div>
       </section>
     </Layout>
   )
