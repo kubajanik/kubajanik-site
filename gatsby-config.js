@@ -51,6 +51,12 @@ module.exports = {
         name: `posts`,
         path: `${__dirname}/content/posts`,
       }
+    },
+    {
+      resolve: `gatsby-plugin-disqus`,
+      options: {
+        shortname: `kubajanik`
+      }
     }
   ],
 }

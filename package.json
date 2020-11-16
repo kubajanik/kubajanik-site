@@ -17,6 +17,7 @@
     "@danestves/tailwindcss-darkmode": "^1.1.5",
     "dotenv": "^8.2.0",
     "gatsby": "^2.26.0",
+    "gatsby-plugin-disqus": "^1.2.2",
     "gatsby-plugin-manifest": "^2.6.0",
     "gatsby-plugin-postcss": "^3.0.3",
     "gatsby-plugin-purgecss": "^5.0.0",
