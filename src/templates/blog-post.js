@@ -2,7 +2,6 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import {graphql} from 'gatsby'
-import 'prismjs/themes/prism-tomorrow.css'
 import {Disqus, CommentCount} from 'gatsby-plugin-disqus'
 
 export default function BlogPost({data}) {
