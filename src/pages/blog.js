@@ -1,7 +1,8 @@
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import {Link, graphql} from 'gatsby'
+import Post from '../components/post'
+import {graphql} from 'gatsby'
 
 export default function Blog({data}) {
   const {nodes: posts} = data.allMarkdownRemark
@@ -31,20 +32,7 @@ export default function Blog({data}) {
       </section>
       <section className="py-12">
         <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-4">
-          {posts.map(post => (
-            <div key={post.id}>
-              <div className="bg-gray-100 rounded dark:bg-gray-800 border border-solid dark:border-gray-600 dark:border-opacity-25">
-                <img className="mb-0 rounded-t" src={require(`../../content/posts${post.fields.slug}cover.png`)} alt="cover"/>
-                <div className="p-5">
-                  <Link to={post.fields.slug}>
-                    <h5 className="mb-3 font-bold text-lg dark:text-green-100 hover:text-green-500 dark:hover:text-green-500 transition-colors duration-500 cursor-pointer">{post.frontmatter.title}</h5>
-                  </Link>
-                  <p className="mb-4 text-sm dark:text-gray-400">{post.excerpt}</p>
-                </div>
-                <div className="pb-3 px-5 text-gray-600 text-xs">{post.frontmatter.date}</div>
-              </div>
-            </div>
-          ))}
+          {posts.map(post => <Post key={post.id} post={{...post.frontmatter, ...post.fields, excerpt: post.excerpt}} />)}
         </div>
       </section>
     </Layout>
