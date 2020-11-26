@@ -75,7 +75,7 @@ export default function Contact() {
 
           <div className="flex flex-col col-span-2 md:col-span-1">
             <input
-              className="h-10 p-3 text-gray-600 rounded border border-gray-400 border-solid placeholder-gray-600 focus:border-green-500 focus:outline-none transition-colors duration-500"
+              className="h-10 p-3 text-gray-600 dark:text-gray-400 placeholder-gray-600 dark:placeholder-gray-400 rounded border border-gray-400 border-solid dark:bg-gray-800 dark:border-gray-600 dark:border-opacity-25 focus:border-green-500 focus:outline-none transition-colors duration-500"
               placeholder="Imię"
               name="name"
               ref={register({ required: 'Wprowadź swoje imię' })}
@@ -85,7 +85,7 @@ export default function Contact() {
 
           <div className="flex flex-col col-span-2 md:col-span-1">
             <input
-              className="h-10 p-3 text-gray-600 rounded border border-gray-400 border-solid placeholder-gray-600 focus:border-green-500 focus:outline-none transition-colors duration-500"
+              className="h-10 p-3 text-gray-600 dark:text-gray-400 placeholder-gray-600 dark:placeholder-gray-400 rounded border border-gray-400 border-solid dark:bg-gray-800 dark:border-gray-600 dark:border-opacity-25 focus:border-green-500 focus:outline-none transition-colors duration-500"
               placeholder="Email"
               name="email"
               ref={register({
@@ -101,7 +101,7 @@ export default function Contact() {
 
           <div className="flex flex-col col-span-2 ">
             <textarea
-              className="p-3 text-gray-600 rounded border border-gray-400 border-solid placeholder-gray-600 focus:border-green-500 focus:outline-none transition-colors duration-500"
+              className="p-3 text-gray-600 dark:text-gray-400 placeholder-gray-600 dark:placeholder-gray-400 rounded border border-gray-400 border-solid dark:bg-gray-800 dark:border-gray-600 dark:border-opacity-25 focus:border-green-500 focus:outline-none transition-colors duration-500"
               rows="10"
               placeholder="Wprowadź twoją wiadomość"
               name="message"

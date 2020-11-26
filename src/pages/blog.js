@@ -18,7 +18,7 @@ export default function Blog({data}) {
           </p>
           <form className="flex flex-col md:flex-row w-full px-8 sm:px-32 mb-0">
             <input
-              className="w-full h-10 p-3 text-gray-600 rounded border border-gray-400 border-solid placeholder-gray-600 focus:border-green-500 focus:outline-none transition-colors duration-500"
+              className="w-full h-10 p-3 text-gray-600 dark:text-gray-400 dark:placeholder-red-400 rounded border border-gray-400 border-solid dark:bg-gray-800 dark:border-gray-600 dark:border-opacity-25 focus:border-green-500 focus:outline-none"
               placeholder="Email"
             />
             <button

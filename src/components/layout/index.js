@@ -9,7 +9,7 @@ export default function Layout({children}) {
 
   return (
     <div className="flex flex-col lg:flex-row min-h-screen">
-      <header className={`lg:fixed w-screen lg:overflow-y-auto lg:w-64 lg:h-screen bg-green-500 dark:bg-gray-800 px-4 py-4 lg:py-6`}>
+      <header className="sticky top-0 z-10 lg:fixed w-screen lg:overflow-y-auto lg:w-64 lg:h-screen bg-green-500 dark:bg-gray-800 py-2 px-3 lg:py-6 lg:px-4">
         <TopBar onToggle={() => setIsOpen(!isOpen)} isOpen={isOpen} />
         <div className={`flex lg:flex flex-col items-center text-white mt-6 ${!isOpen && 'hidden'}`}>
           <Profile />
