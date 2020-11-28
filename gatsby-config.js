@@ -41,7 +41,12 @@ module.exports = {
       options: {
         plugins: [
           `gatsby-remark-reading-time`,
-          `gatsby-remark-prismjs`
+          {
+            resolve: `gatsby-remark-highlight-code`,
+            options: {
+              theme: 'one-dark'
+            }
+          }
         ]
       }
     },

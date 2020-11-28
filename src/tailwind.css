@@ -7,3 +7,9 @@
     overflow: auto;
   }
 }
+
+:root {
+  --deckgo-highlight-code-carbon-toolbar-display: none;
+  --deckgo-highlight-code-carbon-header-padding: 0;
+  --deckgo-highlight-code-margin: 16px 0 16px 0;
+}

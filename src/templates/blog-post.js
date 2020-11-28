@@ -3,6 +3,8 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import {graphql} from 'gatsby'
 import {Disqus, CommentCount} from 'gatsby-plugin-disqus'
+import {defineCustomElements} from '@deckdeckgo/highlight-code/dist/loader'
+defineCustomElements()
 
 export default function BlogPost({data}) {
   const post = data.markdownRemark
