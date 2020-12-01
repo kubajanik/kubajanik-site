@@ -8,14 +8,20 @@ import {
   FaEnvelopeOpenText
 } from 'react-icons/fa'
 
-const NavLink = props => (
-  <Link
-    {...props}
-    getProps={({isCurrent}) => ({
-      className: `${props.className} ${isCurrent && 'text-green-800 hover:text-green-800 dark:text-green-500 dark:text-opacity-100 dark:hover:text-green-500'}`
-    })}
-  />
-)
+const NavLink = props => {
+  const activeClasses = 'text-green-800 hover:text-green-800 dark:text-green-500 dark:text-opacity-100 dark:hover:text-green-500'
+  return (
+    <Link
+      {...props}
+      getProps={({href, location}) => ({
+        className: `
+          ${props.className} 
+          ${location.pathname.replace(/(.+)\/$/, '$1') === href && activeClasses}
+        `
+      })}
+    />
+  )
+}
 
 export default function Navigation() {
   return (
