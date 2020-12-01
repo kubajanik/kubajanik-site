@@ -2,7 +2,17 @@ module.exports = {
   siteMetadata: {
     title: `Kuba Janik`,
     description: `My personal website`,
-    author: 'Kuba Janik'
+    author: {
+      name: `Kuba Janik`,
+      profile: `https://themes.3rdwavemedia.com/devcard/bs4/2.2/assets/images/profile.png`,
+      description: `Cześć, nazywam się Kuba Janik, mam 19 lat i jestem pasjonatem programowania.`,
+      social: {
+        github: `https://github.com/kubajanik`,
+        linkedin: `https://linkedin.com/in/kuba-janik`,
+        stack: `https://stackoverflow.com/u/10536648`,
+        twitter: `https://twitter.com/kubajanik01`,
+      }
+    }
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -10,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Kuba Janik`,
+        name: `Kuba Janik`, 
         short_name: `KJ`,
         start_url: `/`,
         background_color: `#f0fff4`,

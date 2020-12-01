@@ -1,10 +1,29 @@
 import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import {FaGithubAlt, FaLinkedinIn, FaStackOverflow} from 'react-icons/fa'
 import {useForm} from 'react-hook-form'
+import {useStaticQuery, graphql} from 'gatsby'
+import {createSocialIcon} from '../utils/helpers'
 
 export default function Contact() {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          author {
+            social {
+              github
+              twitter
+              linkedin
+              stack
+            }
+          }
+        }
+      }
+    }
+  `)
+  const {social} = data.site.siteMetadata.author
+
   const {handleSubmit, register, errors, formState, reset} = useForm()
   const {isSubmitting} = formState
 
@@ -40,30 +59,17 @@ export default function Contact() {
             społecznościowych.
           </p>
           <div className="flex">
-            <a
-              className="mr-4 mb-4 transition-colors duration-500 text-green-500 hover:text-green-700"
-              href="https://github.com/jakubjanik1"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaGithubAlt size="1.25em" />
-            </a>
-            <a
-              className="mr-4 mb-4 transition-colors duration-500 text-green-500 hover:text-green-700"
-              href="https://linkedin.com/in/kuba-janik"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaLinkedinIn size="1.25em" />
-            </a>
-            <a
-              className="mb-4 transition-colors duration-500 text-green-500 hover:text-green-700"
-              href="https://stackoverflow.com/u/10536648"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <FaStackOverflow size="1.25em" />
-            </a>
+            {Object.entries(social).map(([name, link]) => (
+              <a
+                className="mr-4 mb-4 transition-colors duration-500 text-green-500 hover:text-green-700"
+                href={link}
+                target="_blank"
+                rel="noreferrer"
+                key={name}
+              >
+                {createSocialIcon(name, {size: '1.25em'})}
+              </a>
+            ))}
           </div>
         </div>
       </section>

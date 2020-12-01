@@ -1,43 +1,48 @@
 import React from 'react'
-import {FaGithubAlt, FaLinkedinIn, FaStackOverflow} from 'react-icons/fa'
+import {useStaticQuery, graphql} from 'gatsby'
+import {createSocialIcon} from '../../utils/helpers'
 
 export default function Profile() {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          author {
+            description
+            profile
+            social {
+              github
+              twitter
+              linkedin
+              stack
+            }
+          }
+        }
+      }
+    }
+  `)
+  const {profile, description, social} = data.site.siteMetadata.author
+
   return (
     <>
       <img
         className="w-40 h-40 rounded-full mb-4"
-        src="https://themes.3rdwavemedia.com/devcard/bs4/2.2/assets/images/profile.png"
+        src={profile}
         alt="profile"
       />
-      <p className="text-sm text-green-100 text-center mb-4">
-        Cześć, nazywam się Kuba Janik, mam 19 lat i jestem pasjonatem
-        programowania.
-      </p>
+      <p className="text-sm text-green-100 text-center mb-4">{description}</p>
       <div className="flex flex-row py-2">
-        <a
-          className="bg-green-100 text-green-500 dark:bg-green-500 dark:text-green-100 w-8 h-8 rounded-full grid place-items-center mr-2 transition-colors duration-500 hover:bg-opacity-75"
-          href="https://github.com/jakubjanik1"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaGithubAlt />
-        </a>
-        <a
-          className="bg-green-100 text-green-500 dark:bg-green-500 dark:text-green-100 w-8 h-8 rounded-full grid place-items-center mr-2 transition-colors duration-500 hover:bg-opacity-75"
-          href="https://linkedin.com/in/kuba-janik"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaLinkedinIn />
-        </a>
-        <a
-          className="bg-green-100 text-green-500 dark:bg-green-500 dark:text-green-100 w-8 h-8 rounded-full grid place-items-center transition-colors duration-500 hover:bg-opacity-75"
-          href="https://stackoverflow.com/u/10536648"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <FaStackOverflow />
-        </a>
+        {Object.entries(social).map(([name, link]) => (
+          <a
+            className="bg-green-100 text-green-500 dark:bg-green-500 dark:text-green-100 w-8 h-8 rounded-full grid place-items-center mr-2 transition-colors duration-500 hover:bg-opacity-75"
+            href={link}
+            target="_blank"
+            rel="noreferrer"
+            key={name}
+          >
+            {createSocialIcon(name)}
+          </a>
+        ))}
       </div>
     </>
   )

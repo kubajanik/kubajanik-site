@@ -11,7 +11,9 @@ export default function SEO({title, description, lang, meta}) {
           siteMetadata {
             title
             description
-            author
+            author {
+              name
+            }
           }
         }
       }
