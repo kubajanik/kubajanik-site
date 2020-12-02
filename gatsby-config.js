@@ -4,7 +4,7 @@ module.exports = {
     description: `My personal website`,
     author: {
       name: `Kuba Janik`,
-      profile: `https://themes.3rdwavemedia.com/devcard/bs4/2.2/assets/images/profile.png`,
+      profile: `https://res.cloudinary.com/djc9jias4/image/upload/v1606924264/kubajanik-site/cnkmzjlcufqcubq2jccq.webp`,
       description: `Cześć, nazywam się Kuba Janik, mam 19 lat i jestem pasjonatem programowania.`,
       social: {
         github: `https://github.com/kubajanik`,
