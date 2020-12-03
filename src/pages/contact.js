@@ -46,17 +46,16 @@ export default function Contact() {
           <h2 className="font-bold text-3xl mb-2 dark:text-green-100">Kontakt</h2>
           <p className="mb-4 text-center dark:text-gray-400">
             Masz jakąś propozycję lub po prostu chcesz coś napisać? Możesz
-            wypełnić poniższy formularz kontaktowy lub wysłać maila na adres
+            wypełnić poniższy formularz kontaktowy lub wysłać e-maila na adres
             <a
               className="text-green-500 hover:text-green-700 transition-colors duration-500 hover:underline"
               href="mailto:jakubjanik00@gmail.com"
             >
               &nbsp;jakubjanik00@gmail.com
-            </a>
+            </a>.
           </p>
           <p className="mb-4 text-center dark:text-gray-400">
-            Chcesz się skontaktować? Objserwuj mnie na poniższych mediach
-            społecznościowych.
+            Możesz także znaleźć mnie na poniższych mediach społecznościowych.
           </p>
           <div className="flex">
             {Object.entries(social).map(([name, link]) => (
@@ -95,7 +94,7 @@ export default function Contact() {
               placeholder="Email"
               name="email"
               ref={register({
-                required: 'Wprowadź swojego maila',
+                required: 'Wprowadź swojego e-maila',
                 pattern: {
                   value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
                   message: 'Wprowadź poprawny adres email'
@@ -109,9 +108,9 @@ export default function Contact() {
             <textarea
               className="p-3 text-gray-600 dark:text-gray-400 placeholder-gray-600 dark:placeholder-gray-400 rounded border border-gray-400 border-solid dark:bg-gray-800 dark:border-gray-600 dark:border-opacity-25 focus:border-green-500 focus:outline-none transition-colors duration-500"
               rows="10"
-              placeholder="Wprowadź twoją wiadomość"
+              placeholder="Wiadomość"
               name="message"
-              ref={register({ required: 'Wprowadź twoją wiadomość' })}
+              ref={register({ required: 'Wprowadź swoją wiadomość' })}
             ></textarea>
             {errors.message && <div className="text-sm text-red-500 py-2">{errors.message.message}</div>}
           </div>

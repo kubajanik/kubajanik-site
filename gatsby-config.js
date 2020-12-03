@@ -5,7 +5,7 @@ module.exports = {
     author: {
       name: `Kuba Janik`,
       profile: `https://res.cloudinary.com/djc9jias4/image/upload/v1606924264/kubajanik-site/cnkmzjlcufqcubq2jccq.webp`,
-      description: `Cześć, nazywam się Kuba Janik, mam 19 lat i jestem pasjonatem programowania.`,
+      description: `Cześć, nazywam się Kuba, mam 19 lat i jestem pasjonatem programowania.`,
       social: {
         github: `https://github.com/kubajanik`,
         linkedin: `https://linkedin.com/in/kuba-janik`,

@@ -29,7 +29,6 @@
     "gatsby-remark-reading-time": "^1.1.0",
     "gatsby-source-filesystem": "^2.4.2",
     "gatsby-transformer-remark": "^2.9.2",
-    "lodash.shuffle": "^4.2.0",
     "nodemailer": "^6.4.15",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",

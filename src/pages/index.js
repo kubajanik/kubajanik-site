@@ -3,14 +3,13 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Project from '../components/project'
 import Post from '../components/post'
-import {FaArrowAltCircleRight, FaFileAlt} from 'react-icons/fa'
+import {FaArrowAltCircleRight, FaBlog} from 'react-icons/fa'
 import {Link, graphql} from 'gatsby'
 import projects from '../../content/projects.yaml'
-import shuffle from 'lodash.shuffle'
 
 export default function Home({data}) {
   const {nodes: latestPosts} = data.allMarkdownRemark
-  const featuredProjects = shuffle(projects).slice(0, 4)
+  const featuredProjects = projects.slice(0, 4)
 
   return (
     <Layout>
@@ -21,22 +20,22 @@ export default function Home({data}) {
           <p className="mb-6 text-center dark:text-gray-400">
             Jestem miłośnikiem programowania, zajmuję się głównie tworzeniem aplikacji webowych. 
             Piszę także o programowaniu na moim blogu. Chcesz zobaczyć coś więcej? 
-            Spawdź portfolio z projektami oraz CV.
+            Sprawdź portfolio z projektami oraz mojego bloga.
           </p>
-          <div className="mb-6 flex">
+          <div className="flex flex-col xs:flex-row justify-center">
             <Link
-              className="flex items-center justify-center h-10 mb-4 mr-3 px-4 py-1 bg-green-500 text-green-100 font-bold rounded hover:bg-green-700 transition-colors duration-500"
+              className="flex items-center justify-center h-10 mb-3 xs:mb-0 xs:mr-3 px-4 py-1 bg-green-500 text-green-100 font-bold rounded hover:bg-green-700 transition-colors duration-500"
               to="/portfolio"
             >
               <FaArrowAltCircleRight className="mr-2" /> 
               Zobacz portfolio
             </Link>
             <Link
-              className="flex items-center justify-center h-10 mb-4 px-4 py-1 bg-gray-600 text-green-100 font-bold rounded hover:bg-gray-700 transition-colors duration-500"
-              to="/resume"
+              className="flex items-center justify-center h-10 px-4 py-1 bg-gray-600 text-green-100 font-bold rounded hover:bg-gray-700 transition-colors duration-500"
+              to="/blog"
             >
-              <FaFileAlt className="mr-2" /> 
-              Zobacz CV
+              <FaBlog className="mr-2" /> 
+              Zobacz bloga
             </Link>
           </div>
         </div>
@@ -52,7 +51,7 @@ export default function Home({data}) {
             to="/portfolio"
           >
             <FaArrowAltCircleRight className="mr-2" /> 
-            Zobacz portfolio
+            Zobacz więcej
           </Link>
         </div>
       </section>
@@ -72,7 +71,7 @@ export default function Home({data}) {
           to="/blog"
         >
           <FaArrowAltCircleRight className="mr-2" /> 
-          Zobacz blog
+          Zobacz więcej
         </Link>
       </div>
       </section>

@@ -4,7 +4,7 @@ import {
   FaHome,
   FaLaptopCode,
   FaBlog,
-  FaUser,
+  FaFileAlt,
   FaEnvelopeOpenText
 } from 'react-icons/fa'
 
@@ -49,10 +49,10 @@ export default function Navigation() {
       </NavLink>
       <NavLink 
         className="text-green-100 dark:text-opacity-75 flex items-center p-2 font-bold hover:text-green-700 dark:hover:text-green-100 transition-colors duration-500" 
-        to="/about"
+        to="/resume"
       >
-        <FaUser className="mr-2" />
-        O mnie
+        <FaFileAlt className="mr-2" />
+        CV
       </NavLink>
       <NavLink 
         className="text-green-100 dark:text-opacity-75 flex items-center p-2 font-bold hover:text-green-700 dark:hover:text-green-100 transition-colors duration-500" 

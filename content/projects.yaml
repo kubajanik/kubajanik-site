@@ -1,49 +1,50 @@
+- 
+  title: ChatMastery
+  description: Aplikacja umożliwiająca wysyłanie wiadomości między użytkownikami lub grupami użytkowników. Można zarejestrować się za pomocą e-maila lub wybranych mediów społecznościowych.
+  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1604322181/chatmastery_github/g0rvcmcdsijiwljq19dk.webp
+  github: https://github.com/jakubjanik1/ChatMastery
+  live: https://chatmastery.herokuapp.com/
+  tags: [Vue, Node, Express, JavaScript, MongoDB, SCSS]
+- 
+  title: Job listings with filtering
+  description: Strona zawiera listę ofert pracy, które możemy filtrować klikając na wybrane kryteria.
+  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1606982575/job-listings-with-filtering/ihjx8kinb5a5ngnfmdyq.webp
+  github: https://github.com/jakubjanik1/job-listings-with-filtering
+  live: https://job-listings-with-filtering-psi.vercel.app/
+  tags: [Vue, SCSS, JavaScript, Cypress, Jest]
+- 
+  title: IP Address Tracker
+  description: Aplikacja umożliwia zlokalizowanie na mapie podanego adresu IP lub domeny. Wyświetla także informacje takie jak adres czy strefa czasowa.
+  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1602754357/ip-address-tracker/lsqicd0x2dozeg2mroqc.webp
+  github: https://github.com/jakubjanik1/ip-address-tracker
+  live: http://ip-address-tracker-umber.vercel.app/
+  tags: [React, CSS, JavaScript, Jest]
 -
   title: Chat CSS Illustration
-  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
+  description: Strona prezentująca jakiś produkt czy narzędzie. Przedstawia smartfon z interfejsem chatu oraz krótki opis.
   image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1602411348/chat-app-css-illustration/mrlojgx9zagw8og6fr5w.webp
   github: https://github.com/jakubjanik1/chat-app-css-illustration
   live: https://chat-app-css-illustration-indol.vercel.app/
   tags: [HTML, SCSS, JavaScript]
 - 
-  title: Job listings with filtering
-  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
-  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1596522681/job-listings-with-filtering/zgf4nvxf2sidpwbzjitn.webp
-  github: https://github.com/jakubjanik1/job-listings-with-filtering
-  live: https://job-listings-with-filtering-psi.vercel.app/
-  tags: [HTML, SCSS, JavaScript]
-- 
-  title: IP Address Tracker
-  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
-  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1602754357/ip-address-tracker/lsqicd0x2dozeg2mroqc.webp
-  github: https://github.com/jakubjanik1/ip-address-tracker
-  live: http://ip-address-tracker-umber.vercel.app/
-  tags: [HTML, SCSS, JavaScript]
-- 
-  title: Intro component with sign-up form
-  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
-  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1596278307/intro-component-with-signup-form/sijx2itfdzkzvblhfbak.webp
-  github: https://github.com/jakubjanik1/intro-component-with-signup-form
-  live: https://intro-component-with-signup-form-rust.now.sh/
-  tags: [HTML, SCSS, JavaScript]
-- 
-  title: CodeSociety
-  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
-  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1598516976/code-society/tpawgfn9jqwrorng625y.webp
-  github: https://github.com/jakubjanik1/CodeSociety
-  live: https://codesociety.herokuapp.com/
-  tags: [HTML, SCSS, JavaScript]
-- 
   title: readingly
-  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
+  description: Aplikacja do czytania ebooków w formacie EPUB. W czasie czytania możemy zmienić wielkość liter, rodzaj czcionki czy jasność.
   image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1596178207/readingly/ds2anbuxnwqrneezqmz8.webp
   github: https://github.com/jakubjanik1/readingly
   live: https://readingly-ab5f7.firebaseapp.com/
-  tags: [HTML, SCSS, JavaScript]
+  tags: [Vue, SCSS, JavaScript, Jest, Firebase]
 - 
-  title: ChatMastery
-  description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere ad incidunt iusto. Nobis et facilis maxime voluptate facilis maxime ad iusto.
-  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1604322181/chatmastery_github/g0rvcmcdsijiwljq19dk.webp
-  github: https://github.com/jakubjanik1/ChatMastery
-  live: https://chatmastery.herokuapp.com/
-  tags: [HTML, SCSS, JavaScript]
+  title: CodeSociety
+  description: Standardowy blog. Możliwość pisania komentarzy pod postami oraz lajkowania ich, lecz po wcześniejszej rejestracji i logowaniu. 
+    Zawiera panel administracyjny umożliwiający dodawanie oraz edycję artykułów.
+  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1598516976/code-society/tpawgfn9jqwrorng625y.webp
+  github: https://github.com/jakubjanik1/CodeSociety
+  live: https://codesociety.herokuapp.com/
+  tags: [PHP, CSS, HTML, JavaScript, PostgreSQL]
+- 
+  title: Intro component with sign-up form
+  description: Strona z prostym formularzem rejestracyjnym z walidacją.
+  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1596278307/intro-component-with-signup-form/sijx2itfdzkzvblhfbak.webp
+  github: https://github.com/jakubjanik1/intro-component-with-signup-form
+  live: https://intro-component-with-signup-form-rust.now.sh/
+  tags: [HTML, CSS, JavaScript]

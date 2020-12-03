@@ -2,7 +2,11 @@ module.exports = {
   future: {},
   purge: [],
   theme: {
-    extend: {},
+    extend: {
+      screens: {
+        xs: '400px',
+      }
+    },
   },
   variants: {
     backgroundColor: ['hover', 'focus', 'dark', 'dark:hover', 'dark:focus'],

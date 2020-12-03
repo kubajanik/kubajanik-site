@@ -17,7 +17,7 @@ export default function BlogPost({data}) {
   return (
     <Layout>
       <SEO title={title} />
-      <article className="p-12">
+      <article className="py-12 px-8 md:px-12">
         <div className="mx-auto max-w-xl">
           <h2 className="text-3xl font-bold mb-2 dark:text-green-100">{title}</h2>
           <div className="mb-4 text-sm text-gray-600">
