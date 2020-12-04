@@ -10,9 +10,9 @@ export default function Project({project}) {
         <p className="mb-4 text-sm dark:text-gray-400">{project.description}</p>
       </div>
       <div className="mt-auto pb-3 px-5 text-gray-600 text-xs">{project.tags.join(', ')}</div>
-      <div className="rounded absolute inset-0 bg-gray-400 h-full w-full opacity-0 hover:bg-opacity-75 hover:opacity-100 cursor-pointer flex flex-col items-center justify-evenly transition-all duration-500 ease-in-out">
+      <div className="grid grid-cols-2">
         <a
-          className="flex items-center justify-center h-8 text-sm mb-4 mr-3 px-4 py-1 bg-green-500 text-green-100 font-bold rounded hover:bg-green-700 transition-colors duration-500"
+          className="flex self-center border-t border-r border-solid rounded-bl items-center justify-center h-10 text-sm px-4 py-1 font-bold dark:border-gray-600 dark:border-opacity-25 dark:text-gray-400 hover:text-green-100 hover:bg-green-500"
           href={project.github}
           target="_blank"
           rel="noreferrer"
@@ -21,7 +21,7 @@ export default function Project({project}) {
           Github
         </a>
         <a
-          className="flex items-center justify-center h-8 text-sm mb-4 mr-3 px-4 py-1 bg-gray-600 text-green-100 font-bold rounded hover:bg-gray-700 transition-colors duration-500"
+          className="flex self-center border-t border-solid rounded-br items-center justify-center h-10 text-sm px-4 py-1 font-bold dark:border-gray-600 dark:border-opacity-25 dark:text-gray-400 hover:text-green-100 hover:bg-gray-700"
           href={project.live}
           target="_blank"
           rel="noreferrer"
