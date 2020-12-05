@@ -93,7 +93,7 @@ export const latestPostsQuery = graphql`
         }
         frontmatter {
           title
-          date(fromNow: true)
+          date(fromNow: true, locale: "pl")
         }
       }
     }

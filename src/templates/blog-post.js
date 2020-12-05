@@ -23,16 +23,10 @@ export default function BlogPost({data}) {
           <div className="mb-4 text-sm text-gray-600">
             <span>{date}</span>
             <span className="mx-2">•</span>
-            <span>{post.fields.readingTime.text}</span>
-            <span className="mx-2">•</span>
-            <a href="#comments" className="hover:text-gray-800 hover:underline">
-              <CommentCount config={disqusConfig} />
-            </a>
+            <span>{Math.ceil(post.fields.readingTime.minutes)} min</span>
           </div>
           <div className="dark:text-gray-400 mb-12" dangerouslySetInnerHTML={{__html: post.html}}></div>
-          <div id="comments">
-            <Disqus config={disqusConfig} />
-          </div>
+          <Disqus config={disqusConfig} />
         </div>
       </article>
     </Layout>
@@ -44,11 +38,11 @@ export const postQuery = graphql`
     markdownRemark(id: {eq: $id}) {
       frontmatter {
         title
-        date(fromNow: true)
+        date(fromNow: true, locale: "pl")
       }
       fields {
         readingTime {
-          text
+          minutes
         }
       }
       html
