@@ -1,5 +1,6 @@
 ---
 title: Set up a React app with Parcel
+cover: cover.png
 date: 2020-11-09
 ---
 

@@ -4,7 +4,6 @@ module.exports = {
     description: `My personal website`,
     author: {
       name: `Kuba Janik`,
-      profile: `https://res.cloudinary.com/djc9jias4/image/upload/v1606924264/kubajanik-site/cnkmzjlcufqcubq2jccq.webp`,
       description: `Cześć, nazywam się Kuba, mam 19 lat i jestem pasjonatem programowania.`,
       social: {
         github: `https://github.com/kubajanik`,
@@ -47,6 +46,8 @@ module.exports = {
         pathToConfigModule: `${__dirname}/src/utils/typography`,
       }
     },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-transformer-remark`,
       options: {
@@ -66,6 +67,26 @@ module.exports = {
       options: {
         name: `posts`,
         path: `${__dirname}/content/posts`,
+      }
+    },
+    {
+      resolve: `gatsby-transformer-yaml`,
+      options: {
+        typeName: `Projects`
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `projects`,
+        path: `${__dirname}/content/projects`,
+      }
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`
       }
     },
     {

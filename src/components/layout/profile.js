@@ -1,6 +1,7 @@
 import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
 import {createSocialIcon} from '../../utils/helpers'
+import Image from 'gatsby-image'
 
 export default function Profile() {
   const data = useStaticQuery(graphql`
@@ -9,7 +10,6 @@ export default function Profile() {
         siteMetadata {
           author {
             description
-            profile
             social {
               github
               twitter
@@ -19,15 +19,23 @@ export default function Profile() {
           }
         }
       }
+
+      profile: file(relativePath: {eq: "profile.png"}) {
+        childImageSharp {
+          fluid(maxWidth: 200) {
+            ...GatsbyImageSharpFluid
+          }
+        }
+      }
     }
   `)
-  const {profile, description, social} = data.site.siteMetadata.author
+  const {description, social} = data.site.siteMetadata.author
 
   return (
     <>
-      <img
+      <Image
         className="w-40 h-40 rounded-full mb-4"
-        src={profile}
+        fluid={data.profile.childImageSharp.fluid}
         alt="profile"
       />
       <p className="text-sm text-green-100 text-center mb-4">{description}</p>

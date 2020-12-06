@@ -5,12 +5,8 @@ import Project from '../components/project'
 import Post from '../components/post'
 import {FaArrowAltCircleRight, FaBlog} from 'react-icons/fa'
 import {Link, graphql} from 'gatsby'
-import projects from '../../content/projects.yaml'
 
 export default function Home({data}) {
-  const {nodes: latestPosts} = data.allMarkdownRemark
-  const featuredProjects = projects.slice(0, 4)
-
   return (
     <Layout>
       <SEO title="Strona główna" />
@@ -43,7 +39,7 @@ export default function Home({data}) {
       <section className="py-12">
         <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 mb-12">
           <h2 className="font-bold text-3xl border-l-4 border-green-500 pl-4 md:col-span-2 dark:text-green-100">Przykładowe projekty</h2>
-          {featuredProjects.map((project, i) => <Project key={i} project={project} />)}
+          {data.featuredProjects.nodes.map((project, i) => <Project key={i} project={project} />)}
         </div>
         <div className="flex justify-center py-4">
           <Link
@@ -63,7 +59,7 @@ export default function Home({data}) {
       <section className="py-12">
         <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12 mb-12">
           <h2 className="font-bold text-3xl border-l-4 border-green-500 pl-4 md:col-span-3 dark:text-green-100">Ostatnie artykuły</h2>
-          {latestPosts.map(post => <Post key={post.id} post={{...post.frontmatter, ...post.fields, excerpt: post.excerpt}} />)}
+          {data.latestPosts.nodes.map(post => <Post key={post.id} post={{...post.frontmatter, ...post.fields, excerpt: post.excerpt}} />)}
         </div>
         <div className="flex justify-center py-4">
         <Link
@@ -79,9 +75,9 @@ export default function Home({data}) {
   )
 }
 
-export const latestPostsQuery = graphql`
+export const postsAndProjectsQuery = graphql`
   query {
-    allMarkdownRemark(
+    latestPosts: allMarkdownRemark(
       sort: {fields: [frontmatter___date], order: ASC},
       limit: 3
     ) {
@@ -94,7 +90,33 @@ export const latestPostsQuery = graphql`
         frontmatter {
           title
           date(fromNow: true, locale: "pl")
+          cover {
+            childImageSharp {
+              fluid(maxWidth: 400) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
+      }
+    }
+
+    featuredProjects: allProjects(
+      limit: 4
+    ) {
+      nodes {
+        title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+        github
+        live
+        description
+        tags
       }
     }
   }

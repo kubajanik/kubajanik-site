@@ -1,10 +1,15 @@
 import React from 'react'
 import {FaGithubAlt, FaEye} from 'react-icons/fa'
+import Image from 'gatsby-image'
 
 export default function Project({project}) {
   return (
     <div className="h-full flex flex-col bg-gray-100 dark:bg-gray-800 relative rounded border border-solid dark:border-gray-600 dark:border-opacity-25">
-      <img className="mb-0 rounded-t border-b border-solid dark:border-gray-600 dark:border-opacity-25" src={project.image} alt=""/>
+      <Image 
+        className="mb-0 rounded-t border-b border-solid dark:border-gray-600 dark:border-opacity-25" 
+        fluid={project.image.childImageSharp.fluid}
+        alt={project.title}
+      />
       <div className="p-5">
         <h5 className="mb-3 font-bold text-base dark:text-green-100">{project.title}</h5>
         <p className="mb-4 text-sm dark:text-gray-400">{project.description}</p>

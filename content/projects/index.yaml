@@ -1,35 +1,35 @@
 - 
   title: ChatMastery
   description: Aplikacja umożliwiająca wysyłanie wiadomości między użytkownikami lub grupami użytkowników. Można zarejestrować się za pomocą e-maila lub wybranych mediów społecznościowych.
-  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1604322181/chatmastery_github/g0rvcmcdsijiwljq19dk.webp
+  image: ./chatmastery.png
   github: https://github.com/jakubjanik1/ChatMastery
   live: https://chatmastery.herokuapp.com/
   tags: [Vue, Node, Express, JavaScript, MongoDB, SCSS]
 - 
   title: Job listings with filtering
   description: Strona zawiera listę ofert pracy, które możemy filtrować klikając na wybrane kryteria.
-  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1606982575/job-listings-with-filtering/ihjx8kinb5a5ngnfmdyq.webp
+  image: ./job-listings-with-filtering.png
   github: https://github.com/jakubjanik1/job-listings-with-filtering
   live: https://job-listings-with-filtering-psi.vercel.app/
   tags: [Vue, SCSS, JavaScript, Cypress, Jest]
 - 
   title: IP Address Tracker
   description: Aplikacja umożliwia zlokalizowanie na mapie podanego adresu IP lub domeny. Wyświetla także informacje takie jak adres czy strefa czasowa.
-  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1602754357/ip-address-tracker/lsqicd0x2dozeg2mroqc.webp
+  image: ./ip-address-tracker.png
   github: https://github.com/jakubjanik1/ip-address-tracker
   live: http://ip-address-tracker-umber.vercel.app/
   tags: [React, CSS, JavaScript, Jest]
 -
   title: Chat CSS Illustration
   description: Strona prezentująca jakiś produkt czy narzędzie. Przedstawia smartfon z interfejsem chatu oraz krótki opis.
-  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1602411348/chat-app-css-illustration/mrlojgx9zagw8og6fr5w.webp
+  image: ./chat-app-css-illustration.png
   github: https://github.com/jakubjanik1/chat-app-css-illustration
   live: https://chat-app-css-illustration-indol.vercel.app/
   tags: [HTML, SCSS, JavaScript]
 - 
   title: readingly
   description: Aplikacja do czytania ebooków w formacie EPUB. W czasie czytania możemy zmienić wielkość liter, rodzaj czcionki czy jasność.
-  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1596178207/readingly/ds2anbuxnwqrneezqmz8.webp
+  image: ./readingly.jpg
   github: https://github.com/jakubjanik1/readingly
   live: https://readingly-ab5f7.firebaseapp.com/
   tags: [Vue, SCSS, JavaScript, Jest, Firebase]
@@ -37,14 +37,14 @@
   title: CodeSociety
   description: Standardowy blog. Możliwość pisania komentarzy pod postami oraz lajkowania ich, lecz po wcześniejszej rejestracji i logowaniu. 
     Zawiera panel administracyjny umożliwiający dodawanie oraz edycję artykułów.
-  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1598516976/code-society/tpawgfn9jqwrorng625y.webp
+  image: ./codesociety.png
   github: https://github.com/jakubjanik1/CodeSociety
   live: https://codesociety.herokuapp.com/
   tags: [PHP, CSS, HTML, JavaScript, PostgreSQL]
 - 
   title: Intro component with sign-up form
   description: Strona z prostym formularzem rejestracyjnym z walidacją.
-  image: https://res.cloudinary.com/djc9jias4/image/upload/c_scale,w_600/v1596278307/intro-component-with-signup-form/sijx2itfdzkzvblhfbak.webp
+  image: ./intro-component-with-signup-form.png
   github: https://github.com/jakubjanik1/intro-component-with-signup-form
   live: https://intro-component-with-signup-form-rust.now.sh/
   tags: [HTML, CSS, JavaScript]

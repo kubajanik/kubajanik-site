@@ -53,6 +53,13 @@ export const postsQuery = graphql`
         frontmatter {
           title
           date(fromNow: true, locale: "pl")
+          cover {
+            childImageSharp {
+              fluid(maxWidth: 400) {
+                ...GatsbyImageSharpFluid
+              }
+            }
+          }
         }
       }
     }

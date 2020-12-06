@@ -3,10 +3,9 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import Project from '../components/project'
 import {FaPaperPlane} from 'react-icons/fa'
-import projects from '../../content/projects.yaml'
-import {Link} from 'gatsby'
+import {Link, graphql} from 'gatsby' 
 
-export default function Portfolio() {
+export default function Portfolio({data}) {
   return (
     <Layout>
       <SEO title="Portfolio" />
@@ -28,9 +27,30 @@ export default function Portfolio() {
       </section>
       <section className="py-12">
         <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-4">
-          {projects.map((project, i) => <Project key={i} project={project} />)}
+          {data.allProjects.nodes.map((project, i) => <Project key={i} project={project} />)}
         </div>
       </section>
     </Layout>
   )
 }
+
+export const projectsQuery = graphql`
+  query {
+    allProjects {
+      nodes {
+        title
+        image {
+          childImageSharp {
+            fluid(maxWidth: 800) {
+              ...GatsbyImageSharpFluid_withWebp
+            }
+          }
+        }
+        github
+        live
+        description
+        tags
+      }
+    }
+  }
+`
