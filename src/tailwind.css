@@ -13,3 +13,35 @@
   --deckgo-highlight-code-carbon-header-padding: 0;
   --deckgo-highlight-code-margin: 16px 0 16px 0;
 }
+
+deckgo-highlight-code {
+  @apply mb-8;
+}
+
+.markdown > h2 {
+  @apply text-2xl font-bold mt-12 mb-8;
+}
+
+.markdown a {
+  @apply text-green-500;
+}
+
+.markdown a:hover {
+  @apply text-green-700;
+}
+
+.markdown > p {
+  @apply mb-8;
+}
+
+.markdown > blockquote {
+  @apply mb-8;
+}
+
+.markdown ul {
+  @apply list-disc ml-4 mb-8;
+}
+
+.markdown ol {
+  @apply list-decimal ml-4 mb-8;
+}

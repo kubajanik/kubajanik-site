@@ -25,7 +25,7 @@ export default function BlogPost({data}) {
             <span className="mx-2">•</span>
             <span>{Math.ceil(post.fields.readingTime.minutes)} min</span>
           </div>
-          <div className="dark:text-gray-400 mb-12" dangerouslySetInnerHTML={{__html: post.html}}></div>
+          <div className="markdown dark:text-gray-400 mb-12" dangerouslySetInnerHTML={{__html: post.html}}></div>
           <Disqus config={disqusConfig} />
         </div>
       </article>

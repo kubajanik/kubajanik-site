@@ -78,7 +78,7 @@ export default function Home({data}) {
 export const postsAndProjectsQuery = graphql`
   query {
     latestPosts: allMarkdownRemark(
-      sort: {fields: [frontmatter___date], order: ASC},
+      sort: {fields: [frontmatter___date], order: DESC},
       limit: 3
     ) {
       nodes {

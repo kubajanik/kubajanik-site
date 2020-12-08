@@ -42,7 +42,7 @@ export default function Blog({data}) {
 export const postsQuery = graphql`
   query {
     allMarkdownRemark(
-      sort: {fields: [frontmatter___date], order: ASC}
+      sort: {fields: [frontmatter___date], order: DESC}
     ) {
       nodes {
         id

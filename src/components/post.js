@@ -4,7 +4,7 @@ import Image from 'gatsby-image'
 
 export default function Post({post}) {
   return (
-    <div className="bg-gray-100 rounded dark:bg-gray-800 border border-solid dark:border-gray-600 dark:border-opacity-25">
+    <div className="flex flex-col bg-gray-100 rounded dark:bg-gray-800 border border-solid dark:border-gray-600 dark:border-opacity-25">
       <Image 
         className="mb-0 rounded-t"
         fluid={post.cover.childImageSharp.fluid}
@@ -18,7 +18,7 @@ export default function Post({post}) {
         </Link>
         <p className="mb-4 text-sm dark:text-gray-400">{post.excerpt}</p>
       </div>
-      <div className="pb-3 px-5 text-gray-600 text-xs">{post.date}</div>
+      <div className="mt-auto pb-3 px-5 text-gray-600 text-xs">{post.date}</div>
     </div>
   )
 }
