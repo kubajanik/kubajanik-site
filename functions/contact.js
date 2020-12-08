@@ -4,9 +4,11 @@ require('dotenv').config()
 exports.handler = async (event) => {
   const {name, email, message} = JSON.parse(event.body)
   const {EMAIL, PASSWORD} = process.env
+  console.log(EMAIL, PASSWORD)
+  console.log(process.env)
 
   const transporter = nodemailer.createTransport({
-    host: 'smtp.poczta.onet.pl',
+    service: 'gmail',
     port: 465,
     secure: true,
     auth: {
