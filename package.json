@@ -19,7 +19,6 @@
     "dotenv": "^8.2.0",
     "gatsby": "^2.26.0",
     "gatsby-image": "^2.7.0",
-    "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-disqus": "^1.2.2",
     "gatsby-plugin-manifest": "^2.6.0",
     "gatsby-plugin-postcss": "^3.0.3",
@@ -43,7 +42,8 @@
     "react-typography": "^0.16.19",
     "tailwindcss": "^1.9.4",
     "typography": "^0.16.19",
-    "typography-theme-moraga": "^0.16.19"
+    "typography-theme-moraga": "^0.16.19",
+    "use-dark-mode": "^2.3.1"
   },
   "devDependencies": {
     "prettier": "2.1.2"
