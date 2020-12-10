@@ -33,9 +33,12 @@ export default function Contact() {
       body: JSON.stringify(data)
     })
 
-    reset()
-
-    alert((await response.json()).message)
+    if (response.ok) {
+      alert('Wiadomość została wysłana.')
+      reset()
+    } else {
+      alert('Problem z wysłaniem wiadomości. Spróbuj jeszcze raz.')
+    }
   }
 
   return (
