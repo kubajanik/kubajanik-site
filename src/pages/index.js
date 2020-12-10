@@ -93,7 +93,7 @@ export const postsAndProjectsQuery = graphql`
           cover {
             childImageSharp {
               fluid(maxWidth: 400) {
-                ...GatsbyImageSharpFluid
+                ...GatsbyImageSharpFluid_withWebp
               }
             }
           }
@@ -108,8 +108,8 @@ export const postsAndProjectsQuery = graphql`
         title
         image {
           childImageSharp {
-            fluid(maxWidth: 800) {
-              ...GatsbyImageSharpFluid
+            fluid(maxWidth: 600) {
+              ...GatsbyImageSharpFluid_withWebp
             }
           }
         }

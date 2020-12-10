@@ -23,7 +23,7 @@ export default function Profile() {
       profile: file(relativePath: {eq: "profile.png"}) {
         childImageSharp {
           fluid(maxWidth: 200) {
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
