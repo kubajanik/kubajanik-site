@@ -14,7 +14,7 @@ export default function Home({data}) {
         <div className="mx-auto flex flex-col items-center max-w-3xl px-4">
           <h1 className="font-bold text-5xl mb-4 dark:text-green-100">Kuba Janik</h1>
           <p className="mb-6 text-center dark:text-gray-400">
-            Jestem miłośnikiem programowania, zajmuję się głównie tworzeniem aplikacji webowych. 
+            Jestem pasjonatem programowania, zajmuję się głównie tworzeniem aplikacji webowych. 
             Piszę także o programowaniu na moim blogu. Chcesz zobaczyć coś więcej? 
             Sprawdź portfolio z projektami oraz mojego bloga.
           </p>

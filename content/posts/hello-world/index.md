@@ -1,5 +1,5 @@
 ---
-title: Set up a React app with Parcel
+title: Hello world
 cover: cover.png
 date: 2020-11-09
 ---
