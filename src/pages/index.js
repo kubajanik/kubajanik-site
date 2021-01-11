@@ -5,8 +5,15 @@ import Project from '../components/project'
 import Post from '../components/post'
 import {FaArrowAltCircleRight, FaBlog} from 'react-icons/fa'
 import {Link, graphql} from 'gatsby'
+import allSkills from '../../content/skills/index.yaml'
+import * as icons from 'react-icons/si'
 
 export default function Home({data}) {
+  const skills = allSkills.map(skill => {
+    skill.icon = icons[skill.icon]
+    return skill
+  })
+
   return (
     <Layout>
       <SEO title="Strona główna" />
@@ -36,6 +43,25 @@ export default function Home({data}) {
           </div>
         </div>
       </section>
+
+      <section className="py-12">
+        <div className="mx-auto max-w-5xl px-8 mb-4">
+          <h2 className="font-bold text-3xl border-l-4 border-green-500 pl-4 dark:text-green-100">Technologie</h2>
+          <div className="flex flex-wrap gap-8 justify-between pt-12">
+            {skills.map((skill, i) => (
+              <div key={i} className="w-32 p-4 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center rounded border border-solid dark:border-gray-600 dark:border-opacity-25">
+                <skill.icon style={{color: skill.color}} className="text-3xl mb-2" />
+                <div className="font-bold text-base dark:text-green-100">{skill.name}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <div className="mx-auto max-w-5xl px-8">
+        <div className="my-4 border-0 border-t border-solid border- dark:border-gray-600 dark:border-opacity-25" />
+      </div>
+    
       <section className="py-12">
         <div className="mx-auto max-w-5xl px-8 grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-12 mb-12">
           <h2 className="font-bold text-3xl border-l-4 border-green-500 pl-4 md:col-span-2 dark:text-green-100">Przykładowe projekty</h2>

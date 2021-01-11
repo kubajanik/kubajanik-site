@@ -1,0 +1,48 @@
+- 
+  name: JavaScript
+  color: '#F1DE4F'
+  icon: SiJavascript
+- 
+  name: React
+  color: '#00d8ff'
+  icon: SiReact
+- 
+  name: Vue
+  color: '#42b883'
+  icon: SiVueDotJs
+- 
+  name: Node
+  color: '#6cc24a'
+  icon: SiNodeDotJs
+- 
+  name: Git
+  color: '#f1502f'
+  icon: SiGit
+- 
+  name: HTML
+  color: '#e34f26'
+  icon: SiHtml5
+- 
+  name: CSS
+  color: '#53a7dc'
+  icon: SiCss3
+- 
+  name: SCSS
+  color: '#cd6799'
+  icon: SiSass
+- 
+  name: GraphQL
+  color: '#e535ab'
+  icon: SiGraphql
+- 
+  name: MongoDB
+  color: '#589636'
+  icon: SiLeaflet
+- 
+  name: Linux
+  color: '#000'
+  icon: SiLinux
+- 
+  name: PostgreSQL
+  color: '#0064a5'
+  icon: SiPostgresql
