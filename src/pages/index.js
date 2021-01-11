@@ -9,10 +9,10 @@ import allSkills from '../../content/skills/index.yaml'
 import * as icons from 'react-icons/si'
 
 export default function Home({data}) {
-  const skills = allSkills.map(skill => {
-    skill.icon = icons[skill.icon]
-    return skill
-  })
+  function getIcon(name, props) {
+    const Icon = icons[name]
+    return <Icon {...props} />
+  }
 
   return (
     <Layout>
@@ -48,9 +48,9 @@ export default function Home({data}) {
         <div className="mx-auto max-w-5xl px-8 mb-4">
           <h2 className="font-bold text-3xl border-l-4 border-green-500 pl-4 dark:text-green-100">Technologie</h2>
           <div className="flex flex-wrap gap-8 justify-between pt-12">
-            {skills.map((skill, i) => (
+            {allSkills.map((skill, i) => (
               <div key={i} className="w-32 p-4 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center rounded border border-solid dark:border-gray-600 dark:border-opacity-25">
-                <skill.icon style={{color: skill.color}} className="text-3xl mb-2" />
+                {getIcon(skill.icon, {style: {color: skill.color}, className: "text-3xl mb-2"})}
                 <div className="font-bold text-base dark:text-green-100">{skill.name}</div>
               </div>
             ))}
