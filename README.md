@@ -45,6 +45,10 @@ This is my personal website with portfolio, blog, cv and contact page. It was bu
 </p>
 
 <p align="center">
+    <img src="https://res.cloudinary.com/djc9jias4/image/upload/v1611219762/kubajanik-site/ucjiz79htwtqs2u5vbsm.webp" alt="Screenshot">
+</p>
+
+<p align="center">
     <img src="https://res.cloudinary.com/djc9jias4/image/upload/v1611215685/kubajanik-site/cnh0ksc1jmmdg0vgzuxz.webp" alt="Screenshot">
 </p>
 
@@ -52,6 +56,9 @@ This is my personal website with portfolio, blog, cv and contact page. It was bu
     <img src="https://res.cloudinary.com/djc9jias4/image/upload/v1611215740/kubajanik-site/gmzjnyw03i4mgalrysfo.webp" alt="Screenshot">
 </p>
 
+<p align="center">
+    <img src="https://res.cloudinary.com/djc9jias4/image/upload/v1611219660/kubajanik-site/y6zdshgcjmgpfizysqhs.webp" alt="Screenshot">
+</p>
 
 ## Installation 💾
 
