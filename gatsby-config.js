@@ -17,6 +17,14 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-use-dark-mode`,
     {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          'UA-139693261-3'
+        ]
+      }
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Kuba Janik`, 
