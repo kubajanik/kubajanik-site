@@ -20,10 +20,12 @@ export default function Blog({data}) {
             <input
               className="w-full h-10 p-3 text-gray-600 dark:text-gray-400 dark:placeholder-red-400 rounded border border-gray-400 border-solid dark:bg-gray-800 dark:border-gray-600 dark:border-opacity-25 focus:border-green-500 focus:outline-none"
               placeholder="Email"
+              disabled
             />
             <button
-              className="h-10 p-3 mt-2 md:mt-0 md:ml-2 leading-none bg-green-500 rounded text-white font-bold hover:bg-green-700 transition-colors duration-500"
+              className="h-10 p-3 mt-2 md:mt-0 md:ml-2 leading-none bg-green-500 rounded text-white font-bold disabled:cursor-not-allowed transition-colors duration-500"
               type="submit"
+              disabled
             >
               Subskrybuj
             </button>
