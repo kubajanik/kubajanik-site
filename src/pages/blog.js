@@ -14,22 +14,8 @@ export default function Blog({data}) {
         <div className="mx-auto flex flex-col items-center max-w-3xl px-4">
           <h1 className="font-bold text-3xl mb-2 dark:text-green-100">Blog</h1>
           <p className="mb-4 text-center dark:text-gray-400">
-            Witaj na moim blogu. Subskrybuj i otrzymuj najnowsze artykuły na Twoją skrzynkę.
+            Witaj na moim blogu.
           </p>
-          <form className="flex flex-col md:flex-row w-full px-8 sm:px-32 mb-0">
-            <input
-              className="w-full h-10 p-3 text-gray-600 dark:text-gray-400 dark:placeholder-red-400 rounded border border-gray-400 border-solid dark:bg-gray-800 dark:border-gray-600 dark:border-opacity-25 focus:border-green-500 focus:outline-none"
-              placeholder="Email"
-              disabled
-            />
-            <button
-              className="h-10 p-3 mt-2 md:mt-0 md:ml-2 leading-none bg-green-500 rounded text-white font-bold disabled:cursor-not-allowed transition-colors duration-500"
-              type="submit"
-              disabled
-            >
-              Subskrybuj
-            </button>
-          </form>
         </div>
       </section>
       <section className="py-12">

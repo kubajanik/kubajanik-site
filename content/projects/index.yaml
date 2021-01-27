@@ -1,50 +1,57 @@
 - 
   title: ChatMastery
-  description: Aplikacja umożliwiająca wysyłanie wiadomości między użytkownikami lub grupami użytkowników. Można zarejestrować się za pomocą e-maila lub wybranych mediów społecznościowych.
+  description: Aplikacja umożliwiająca komunikację tesktową między użytkownikami lub grupami użytkowników. Można zarejestrować się za pomocą e-maila lub wybranych mediów społecznościowych.
   image: ./chatmastery.png
-  github: https://github.com/jakubjanik1/ChatMastery
+  github: https://github.com/kubajanik/ChatMastery
   live: https://chatmastery.herokuapp.com/
   tags: [Vue, Node, Express, JavaScript, MongoDB, SCSS]
 - 
   title: Job listings with filtering
-  description: Strona zawiera listę ofert pracy, które możemy filtrować klikając na wybrane kryteria.
+  description: Strona wyświetla listę ofert pracy, które możemy filtrować klikając na wybrane kryteria.
   image: ./job-listings-with-filtering.png
-  github: https://github.com/jakubjanik1/job-listings-with-filtering
+  github: https://github.com/kubajanik/job-listings-with-filtering
   live: https://job-listings-with-filtering-psi.vercel.app/
   tags: [Vue, SCSS, JavaScript, Cypress, Jest]
+- 
+  title: readingly
+  description: Aplikacja do czytania ebooków w formacie EPUB. W czasie czytania możemy zmienić wielkość liter, rodzaj czcionki czy jasność. Po kliknięciu na słowo, wyświetla słownik angielsko-polski.
+  image: ./readingly.jpg
+  github: https://github.com/kubajanik/readingly
+  live: https://readingly.jakubjanik.vercel.app
+  tags: [Vue, SCSS, JavaScript, Jest, Firebase, Vercel]
 - 
   title: IP Address Tracker
   description: Aplikacja umożliwia zlokalizowanie na mapie podanego adresu IP lub domeny. Wyświetla także informacje takie jak adres czy strefa czasowa.
   image: ./ip-address-tracker.png
-  github: https://github.com/jakubjanik1/ip-address-tracker
+  github: https://github.com/kubajanik/ip-address-tracker
   live: http://ip-address-tracker-umber.vercel.app/
   tags: [React, CSS, JavaScript, Jest]
 -
   title: Chat CSS Illustration
   description: Strona prezentująca jakiś produkt czy narzędzie. Przedstawia smartfon z interfejsem chatu oraz krótki opis.
   image: ./chat-app-css-illustration.png
-  github: https://github.com/jakubjanik1/chat-app-css-illustration
+  github: https://github.com/kubajanik/chat-app-css-illustration
   live: https://chat-app-css-illustration-indol.vercel.app/
-  tags: [HTML, SCSS, JavaScript]
-- 
-  title: readingly
-  description: Aplikacja do czytania ebooków w formacie EPUB. W czasie czytania możemy zmienić wielkość liter, rodzaj czcionki czy jasność.
-  image: ./readingly.jpg
-  github: https://github.com/jakubjanik1/readingly
-  live: https://readingly-ab5f7.firebaseapp.com/
-  tags: [Vue, SCSS, JavaScript, Jest, Firebase]
+  tags: [HTML, SCSS, JavaScript, Parcel]
+-
+  title: kubajanik.pl
+  description: Moja personalna strona z blogiem i portfolio.
+  image: ./kubajanik-site.png
+  github: https://github.com/kubajanik/kubajanik-site
+  live: https://kubajanik.pl
+  tags: [Gatsby, React, JavaScript, TailwindCSS, Netlify, Markdown]
 - 
   title: CodeSociety
   description: Standardowy blog. Możliwość pisania komentarzy pod postami oraz lajkowania ich, lecz po wcześniejszej rejestracji i logowaniu. 
     Zawiera panel administracyjny umożliwiający dodawanie oraz edycję artykułów.
   image: ./codesociety.png
-  github: https://github.com/jakubjanik1/CodeSociety
+  github: https://github.com/kubajanik/CodeSociety
   live: https://codesociety.herokuapp.com/
   tags: [PHP, CSS, HTML, JavaScript, PostgreSQL]
 - 
   title: Intro component with sign-up form
   description: Strona z prostym formularzem rejestracyjnym z walidacją.
   image: ./intro-component-with-signup-form.png
-  github: https://github.com/jakubjanik1/intro-component-with-signup-form
+  github: https://github.com/kubajanik/intro-component-with-signup-form
   live: https://intro-component-with-signup-form-rust.now.sh/
-  tags: [HTML, CSS, JavaScript]
+  tags: [HTML, CSS, JavaScript, Parcel]
