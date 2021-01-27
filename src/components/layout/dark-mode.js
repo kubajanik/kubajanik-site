@@ -9,8 +9,10 @@ export default function DarkMode() {
   React.useEffect(() => {
     if (darkMode.value) {
       toggle.current.style.transform = 'translateX(100%)'
+    } else {
+      toggle.current.style.transform = ''
     }
-  }, [])
+  }, [darkMode.value])
   
   return (
     <div className="flex flex-col items-center">
