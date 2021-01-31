@@ -19,7 +19,7 @@ export default function Home({data}) {
       <SEO title="Strona główna" />
       <section className="py-12 bg-gray-100 dark:bg-gray-900 border-b border-solid dark:border-gray-600 dark:border-opacity-25">
         <div className="mx-auto flex flex-col items-center max-w-3xl px-4">
-          <h1 className="font-bold text-5xl mb-4 dark:text-green-100">Kuba Janik</h1>
+          <h1 className="font-bold text-5xl mb-4 dark:text-green-100 text-center">Kuba Janik</h1>
           <p className="mb-6 text-center dark:text-gray-400">
             Jestem pasjonatem programowania, zajmuję się głównie tworzeniem aplikacji webowych. Chcesz zobaczyć coś więcej? 
             Sprawdź portfolio z projektami oraz mojego bloga.
@@ -46,7 +46,7 @@ export default function Home({data}) {
       <section className="py-12">
         <div className="mx-auto max-w-5xl px-8 mb-4">
           <h2 className="font-bold text-3xl border-l-4 border-green-500 pl-4 dark:text-green-100">Technologie</h2>
-          <div className="flex flex-wrap gap-8 justify-between pt-12">
+          <div className="flex flex-wrap gap-8 justify-around pt-12">
             {allSkills.map((skill, i) => (
               <div key={i} className="w-32 p-4 bg-gray-100 dark:bg-gray-800 flex flex-col items-center justify-center rounded border border-solid dark:border-gray-600 dark:border-opacity-25">
                 {getIcon(skill.icon, {style: {color: skill.color}, className: "text-3xl mb-2"})}
