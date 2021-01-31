@@ -6,6 +6,16 @@
   html {
     overflow: auto;
   }
+  @media (min-width: 1024px) {
+    header::-webkit-scrollbar {
+      display: none;
+    }
+    
+    header {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+  }
 }
 
 :root {

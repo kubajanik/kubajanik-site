@@ -4,7 +4,6 @@ import {
   FaHome,
   FaLaptopCode,
   FaBlog,
-  FaFileAlt,
   FaEnvelopeOpenText
 } from 'react-icons/fa'
 
