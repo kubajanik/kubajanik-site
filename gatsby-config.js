@@ -4,7 +4,7 @@ module.exports = {
     description: `My personal website`,
     author: {
       name: `Kuba Janik`,
-      description: `Cześć, nazywam się Kuba, mam 19 lat i jestem pasjonatem programowania.`,
+      description: `Cześć, nazywam się Kuba i jestem pasjonatem programowania.`,
       social: {
         github: `https://github.com/kubajanik`,
         linkedin: `https://linkedin.com/in/kuba-janik`,
