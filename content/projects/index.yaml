@@ -1,4 +1,11 @@
 - 
+  title: Car Recognition
+  description: Aplikacja webowa rozpoznająca samochód na podstawie zrobionego zdjęcia (działa tylko na urządzeniach mobilnych). Projekt nie jest całkowicie skończony.
+  image: ./car-recognition.jpg
+  github: https://github.com/kubajanik/car-recognition
+  live: https://car-recognition.netlify.app
+  tags: [React, JavaScript, SCSS, Netlify]
+- 
   title: ChatMastery
   description: Aplikacja umożliwiająca komunikację tesktową między użytkownikami lub grupami użytkowników. Można zarejestrować się za pomocą e-maila lub wybranych mediów społecznościowych.
   image: ./chatmastery.png
